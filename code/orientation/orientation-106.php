@@ -1,15 +1,14 @@
 <?php
-/* We're going to add a few things to the menu:
-   - Smoked Fish Soup
-   - Duck with Pea Shoots
-   - Shark Fin Soup
+/* 我們將把以下幾項加入菜單：
+   - 煙熏魚湯
+   - 鴨肉豌豆筍
+   - 魚翅湯
 */
-print 'Smoked Fish Soup, Duck with Pea Shoots, Shark Fin Soup ';
-print 'Cost: 3.25 + 9.50 + 25.00';
+print '煙熏魚湯，鴨肉豌豆筍，魚翅湯 ';
+print '花費：3.25 + 9.50 + 25.00';
 
-/* This is the old menu:
-The following lines are inside this comment so they don't get executed.
-print 'Hamburger, French Fries, Cola ';
-print 'Cost: 0.99 + 1.25 + 1.50';
+/* 這是舊菜單:
+下面幾行因為被註解掉了，所以不會被執行
+print '漢堡，炸薯條，可樂 ';
+print '花費：0.99 + 1.25 + 1.50';
 */
-?>

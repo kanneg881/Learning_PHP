@@ -1,5 +1,4 @@
 <?php
-print        "Too many spaces"           ;
-print"Too few spaces";
-print "Just the right amount of spaces";
-?>
+print        "太多空白"           ;
+print"太少空白";
+print "恰到好處的空白";

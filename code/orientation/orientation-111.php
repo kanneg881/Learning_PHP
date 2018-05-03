@@ -1,3 +1,3 @@
-<?php print "The population of the US is about: ";
-print number_format(320853904);
-?>
+<?php
+print "台灣人口約：";
+print number_format(23571990);

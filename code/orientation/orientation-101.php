@@ -1,8 +1,6 @@
 <?php
 
-print "Hello";
+print "你好";
 
 
-print " World!";
-
-?>
+print " 世界!";

@@ -1,30 +1,37 @@
 <?php
-// Use the SQLite database 'dinner.db'
-$db = new PDO('sqlite:dinner.db');
-// Define what the allowable meals are
-$meals = array('breakfast','lunch','dinner');
-// Check if submitted form parameter "meal" is one of
-// "breakfast", "lunch", or "dinner"
+/** @var PDO $database 使用 SQLite 資料庫名稱 'dinner.db' */
+$database = new PDO('sqlite:dinner.db');
+/** @var array $meals 定義餐點的種類 */
+$meals = array('早餐', '午餐', '晚餐');
+
+/**
+ * 檢查送出的表單中 "meal" 變數值是不是 "breakfast"、
+ * "lunch" 或 "dinner" 其中之一
+ */
 if (in_array($_POST['meal'], $meals)) {
-    // If so, get all of the dishes for the specified meal
-    $stmt = $db->prepare('SELECT dish,price FROM meals WHERE meal LIKE ?');
-    $stmt->execute(array($_POST['meal']));
-    $rows = $stmt->fetchAll();
-    // If no dishes were found in the database, say so
-    if (count($rows) == 0) {
-        print "No dishes available.";
+    /** @var bool|PDOStatement $statement 取得相關該餐點的菜名 */
+    $statement = $database->prepare('SELECT dish, price FROM meals WHERE meal LIKE ?');
+    $statement->execute(array($_POST['meal']));
+    /** @var array $mealsResult 相關該餐點的菜名 */
+    $mealsResult = $statement->fetchAll();
+
+    // 如果找不到任何菜名的話
+    if (count($mealsResult) == 0) {
+        print "找不到任何菜名。";
     } else {
-        // Print out each dish and its price as a row
-        // in an HTML table
-        print '<table><tr><th>Dish</th><th>Price</th></tr>';
-        foreach ($rows as $row) {
+        /**
+         * 在 HTML 表格中，印出所有的菜名與價格
+         */
+        print '<table><tr><th>菜名</th><th>價格</th></tr>';
+
+        foreach ($mealsResult as $row) {
             print "<tr><td>$row[0]</td><td>$row[1]</td></tr>";
         }
         print "</table>";
     }
 } else {
-    // This message prints if the submitted parameter "meal" isn't
-    // "breakfast", "lunch", or "dinner"
-    print "Unknown meal.";
+    /**
+     * 如果表單 "meal" 變數值不是 "早餐"，"午餐"，"晚餐"
+     */
+    print "未知的餐點。";
 }
-?>

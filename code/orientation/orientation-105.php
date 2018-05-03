@@ -1,17 +1,16 @@
 <?php
-// This line is a comment
-print "Smoked Fish Soup ";
-print 'costs $3.25.';
+// 本行是註解
+print "煙熏魚湯 ";
+print '花費 $3.25。';
 
-# Add another dish to the menu
-print 'Duck with Pea Shoots ';
-print 'costs $9.50.';
-// You can put // or # inside single-line comments
-// Using // or # somewhere else on a line also starts a comment
-print 'Shark Fin Soup'; // I hope it's good!
-print 'costs $25.00!'; # This is getting expensive!
+# 將新菜色加入菜單
+print '鴨肉豌豆筍 ';
+print '花費 $9.50。';
+// 單行註解裡也可以放入 // 或 #
+// 在述句之後使用 // 或 #
+print '魚翅湯 '; // 我希望這個好吃！
+print '花費 $25.00!'; # 越來越貴了！
 
-# Putting // or # inside a string doesn't start a comment
+# 在字串中使用 // 或 # 並不會生效
 print 'http://www.example.com';
 print 'http://www.example.com/menu.php#dinner';
-?>
