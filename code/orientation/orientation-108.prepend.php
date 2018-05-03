@@ -1,1 +1,2 @@
-<?php $_POST['user'] = 'Ellen'; ?>
+<?php
+$_POST['user'] = '世界';
