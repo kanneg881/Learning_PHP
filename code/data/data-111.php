@@ -7,7 +7,7 @@ print <<<HTMLBLOCK
 <body bgcolor="#fffed9">
 <h1>晚餐</h1>
 <ul>
-  <li> 牛肉炒飯
+  <li> 乾炒牛河
   <li> 炒嫩豆芽
   <li> 醬油拉麵
   </ul>
