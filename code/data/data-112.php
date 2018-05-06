@@ -1,10 +1,10 @@
 <?php
-// Add one to $birthday
+/** @var int $birthday 生日，將 $birthday 加 1 */
 $birthday = $birthday + 1;
-// Add another one to $birthday
+// 再把 $birthday 加 1
 ++$birthday;
 
-// Subtract 1 from $years_left
-$years_left = $years_left - 1;
-// Subtract another 1 from $years_left
---$years_left;
+/** @var int $yearsLeft 去年，把 $yearsLeft 減 1 */
+$yearsLeft = $yearsLeft - 1;
+// 再把 $yearsLeft 減 1
+--$yearsLeft;

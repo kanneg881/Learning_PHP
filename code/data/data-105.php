@@ -1,6 +1,7 @@
 <?php
 
-$html = '<span class="{class}">Fried Bean Curd<span>
-<span class="{class}">Oil-Soaked Fish</span>';
+/** @var string $html HTML 元素 */
+$html = '<span class="{class}">炸豆腐<span>
+<span class="{class}">油浸魚</span>';
 
-print str_replace('{class}',$my_class,$html);
+print str_replace('{class}', $my_class, $html);

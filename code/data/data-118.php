@@ -1,4 +1,4 @@
 <?php
-if ($_POST['email'] == 'president@whitehouse.gov') {
-   print "Welcome, US President.";
+if ($_POST['email'] == 'president@office.gov') {
+   print "歡迎，台灣總統。";
 }

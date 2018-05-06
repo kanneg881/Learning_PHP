@@ -1,15 +1,24 @@
 <?php
+/** @var float $price 價錢 */
 $price = 3.95;
-$tax_rate = 0.08;
-$tax_amount = $price * $tax_rate;
-$total_cost = $price + $tax_amount;
+/** @var float $taxRate 稅率 */
+$taxRate = 0.08;
+/** @var float $taxAmount 稅價 */
+$taxAmount = $price * $taxRate;
+/** @var float $totalCost 總計 */
+$totalCost = $price + $taxAmount;
 
-$username = 'james';
+/** @var string $userName 使用者名稱 */
+$userName = 'james';
+/** @var string $domain 網域 */
 $domain = '@example.com';
-$email_address = $username . $domain;
+/** @var string $emailAddress 電子郵件位址 */
+$emailAddress = $userName . $domain;
 
-print 'The tax is ' . $tax_amount;
-print "\n"; // this prints a linebreak
-print 'The total cost is ' .$total_cost;
-print "\n"; // this prints a linebreak
-print $email_address;
+print '稅價為 ' . $taxAmount;
+// 這會輸出換行符
+print "\n";
+print '總計為 ' . $totalCost;
+// 這會輸出換行符
+print "\n";
+print $emailAddress;
