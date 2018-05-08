@@ -1,6 +1,6 @@
 <?php
 print '<ul>
-<li>Beef Chow-Fun</li>
-<li>Sauteed Pea Shoots</li>
-<li>Soy Sauce Noodles</li>
+<li>乾炒牛河</li>
+<li>炒嫩豆芽</li>
+<li>醬油拉麵</li>
 </ul>';

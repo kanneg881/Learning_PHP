@@ -1,28 +1,30 @@
 <?php
-$x = strcmp("x54321","x5678");
-if ($x > 0) {
-    print 'The string "x54321" is greater than the string "x5678".';
-} elseif ($x < 0) {
-    print 'The string "x54321" is less than the string "x5678".';
-}
+/** @var int $x strcmp 回傳值 */
+$x = strcmp("x54321", "x5678");
 
-$x = strcmp("54321","5678");
 if ($x > 0) {
-    print 'The string "54321" is greater than the string "5678".';
+    print '字串 "x54321" 比字串 "x5678" 大。';
 } elseif ($x < 0) {
-    print 'The string "54321" is less than the string "5678".';
+    print '字串 "x54321" 比字串 "x5678" 小。';
 }
+$x = strcmp("54321", "5678");
 
-$x = strcmp('6 pack','55 card stud');
 if ($x > 0) {
-    print 'The string "6 pack" is greater than than the string "55 card stud".';
+    print '字串 "54321" 比字串 "5678" 大。';
 } elseif ($x < 0) {
-    print 'The string "6 pack" is less than the string "55 card stud".';
+    print '字串 "54321" 比字串 "5678" 小。';
 }
+$x = strcmp('6 pack', '55 card stud');
 
-$x = strcmp('6 pack',55);
 if ($x > 0) {
-    print 'The string "6 pack" is greater than the number 55.';
+    print '字串 "6 pack" 比字串 "55 card stud" 大。';
 } elseif ($x < 0) {
-    print 'The string "6 pack" is less than the number 55.';
+    print '字串 "6 pack" 比字串 "55 card stud" 小。';
+}
+$x = strcmp('6 pack', 55);
+
+if ($x > 0) {
+    print '字串 "6 pack" 比數字 55 大。';
+} elseif ($x < 0) {
+    print '字串 "6 pack" 比數字 55 小。';
 }

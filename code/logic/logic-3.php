@@ -1,4 +1,4 @@
 <?php
-if (12 == $new_messages) {
-    print "You have twelve new messages.";
+if (12 == $newMessages) {
+    print "你有 12 則新訊息。";
 }

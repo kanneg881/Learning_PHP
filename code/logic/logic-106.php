@@ -1,8 +1,8 @@
 <?php
 if (($age >= 13) && ($age < 65)) {
-   print "You are too old for a kid's discount and too young for the senior's discount.";
+   print "對於小孩的折扣，你太老了，對於老年人的折扣則太年輕。";
 }
 
-if (($meal == 'breakfast') || ($dessert == 'souffle')) {
-   print "Time to eat some eggs.";
+if (($meal == '早餐') || ($dessert == 'souffle')) {
+   print "是時候吃些蛋了";
 }

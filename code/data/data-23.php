@@ -1,5 +1,9 @@
 <?php
+/** @var int $plates 盤子 */
 $plates = 5;
-$dinner = 'Beef Chow-Fun';
-$cost_of_dinner = 8.95;
-$cost_of_lunch = $cost_of_dinner;
+/** @var string $dinner 晚餐 */
+$dinner = '乾炒牛河';
+/** @var float $costOfDinner 晚餐花費 */
+$costOfDinner = 8.95;
+/** @var float $costOfLunch 午餐花費 */
+$costOfLunch = $costOfDinner;

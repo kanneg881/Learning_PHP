@@ -1,11 +1,13 @@
 <?php
+/** @var int $age 年紀 */
 $age = 12;
-$shoe_size = 13;
-if ($age > $shoe_size) {
-    print "Message 1.";
-} elseif (($shoe_size++) && ($age > 20)) {
-    print "Message 2.";
+/** @var int $shoeSize 鞋號 */
+$shoeSize = 13;
+if ($age > $shoeSize) {
+    print "訊息 1.";
+} elseif (($shoeSize++) && ($age > 20)) {
+    print "訊息 2.";
 } else {
-    print "Message 3.";
+    print "訊息 3.";
 }
-print "Age: $age. Shoe Size: $shoe_size";
+print "年紀：{$age}。鞋號：$shoeSize";

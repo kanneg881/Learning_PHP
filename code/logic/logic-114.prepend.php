@@ -1,5 +1,7 @@
 <?php
-
-$new_messages = 12;
-$max_messages = 100;
-$dinner = 'food';
+/** @var int $newMessages 新訊息 */
+$newMessages = 12;
+/** @var int $maxMessages 訊息上限 */
+$maxMessages = 100;
+/** @var string $dinner 晚餐 */
+$dinner = '食物';

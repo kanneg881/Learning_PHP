@@ -1,1 +1,1 @@
-This is always printed.Welcome aboard, trusted user.This is only printed if $logged_in is true.This is also always printed.
+這總是會印出。歡迎登機，可信用户。只有在 $loggedIn 為真時才會印出。這也總是會印出。

@@ -1,16 +1,19 @@
 <?php
-if ($logged_in) {
-    // This runs if $logged_in is true
-    print "Welcome aboard, trusted user.";
-} elseif ($new_messages) {
-    // This runs if $logged_in is false but $new_messages is true
-    print "Dear stranger, there are new messages.";
+if ($loggedIn) {
+    // 如果 $loggedIn 為真時執行此行
+    print "歡迎登機，可信用户。";
+} elseif ($newMessages) {
+    // $loggedIn 為假但 $newMessages 為真時執行此行
+    print "親愛的陌生人，有新的訊息。";
 } elseif ($emergency) {
-    // This runs if $logged_in and $new_messages are false
-    // But $emergency is true
-    print "Stranger, there are no new messages, but there is an emergency.";
+    /**
+     * $loggedIn 跟 $newMessages 都是假，
+     * 但 $emergency 為真時執行此行
+     */
+    print "陌生人，沒有新訊息，但有緊急事件。";
 } else {
-    // This runs if $logged_in, $new_messages, and
-    // $emergency are all false
-    print "I don't know you, you have no messages, and there's no emergency.";
+    /**
+     * $loggedIn、$newMessages、$emergency 全部都是 false 時執行此行
+     */
+    print "我不認識你，你沒有訊息，也沒有緊急事件。";
 }

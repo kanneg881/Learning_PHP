@@ -1,10 +1,12 @@
 <html>
-<head><title>Menu</title></head>
+<head>
+<title>菜單</title>
+</head>
 <body>
 <ul>
-<li> Barbecued pork
-<li> Sliced pork
-<li> Braised pork with bean sprout
+<li> 烤豬肉
+<li> 切片豬肉
+<li> 豆芽燉豬肉
 </ul>
 </body>
 </html>

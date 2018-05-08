@@ -1,7 +1,7 @@
 <?php
 if ($word < 'baa') {
-    print "Your word isn't cookie.";
+    print "你的單字不是 cookie。";
 }
 if ($word >= 'zoo') {
-    print "Your word could be zoo or zymurgy, but not zone.";
+    print "你的單字可以是 zoo 或 zymurgy，但不能是 zone。";
 }

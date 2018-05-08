@@ -1,4 +1,4 @@
 <?php
-if (strlen(trim($_POST['zipcode'])) != 5) {
-    print "Please enter a ZIP Code that is 5 characters long.";
+if (strlen(trim($_POST['zipCode'])) != 5) {
+    print "請輸入長度為5個字的郵政區號。";
 }

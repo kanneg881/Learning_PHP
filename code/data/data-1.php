@@ -1,5 +1,5 @@
 <?php
-print 'I would like a bowl of soup.';
-print 'chicken';
+print '我想要一碗湯。';
+print '雞肉';
 print '06520';
-print '"I am eating dinner," he growled.';
+print '"我在吃晚餐，"他咆哮著。';

@@ -1,5 +1,5 @@
 <?php
-// Grab the first thirty bytes of $_POST['comments']
+// 取得 $_POST['comments'] 開頭的30個字元
 print substr($_POST['comments'], 0, 30);
-// Add an ellipsis
+// 加入省略符號
 print '...';

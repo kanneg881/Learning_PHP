@@ -1,1 +1,3 @@
-<?php $new_messages = 17; ?>
+<?php
+/** @var int $newMessages 新訊息 */
+$newMessages = 17;

@@ -1,28 +1,28 @@
 <?php
-// These values are compared using dictionary order
-if ("x54321"> "x5678") {
-    print 'The string "x54321" is greater than the string "x5678".';
+// 這兩個值使用字典順序進行比較
+if ("x54321" > "x5678") {
+    print '字串 "x54321" 比字串 "x5678" 大。';
 } else {
-    print 'The string "x54321" is not greater than the string "x5678".';
+    print '字串 "x54321" 沒有比字串 "x5678" 大。';
 }
 
-// These values are compared using numeric order
+// 這兩個值使用數值大小進行比較
 if ("54321" > "5678") {
-    print 'The string "54321" is greater than the string "5678".';
+    print '字串 "54321" 比字串 "5678" 大。';
 } else {
-    print 'The string "54321" is not greater than the string "5678".';
+    print '字串 "54321" 沒有比字串 "5678" 大。';
 }
 
-// These values are compared using dictionary order
+// 這兩個值使用字典順序進行比較
 if ('6 pack' < '55 card stud') {
-    print 'The string "6 pack" is less than than the string "55 card stud".';
+    print '字串 "6 pack" 比字串 "55 card stud" 小。';
 } else {
-    print 'The string "6 pack" is not less than the string "55 card stud".';
+    print '字串 "6 pack" 沒有比字串 "55 card stud" 小。';
 }
 
-// These values are compared using numeric order
+// 這兩個值使用數值大小進行比較
 if ('6 pack' < 55) {
-    print 'The string "6 pack" is less than the number 55.';
+    print '字串 "6 pack" 比數字 55 小。';
 } else {
-    print 'The string "6 pack" is not less than the number 55.';
+    print '字串 "6 pack" 沒有比數字 55 小。';
 }
