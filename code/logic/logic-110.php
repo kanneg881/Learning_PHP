@@ -1,7 +1,8 @@
 <?php
-print "This is always printed.";
-if ($logged_in) {
-    print "Welcome aboard, trusted user.";
-    print 'This is only printed if $logged_in is true.';
+print "這總是會印出。";
+
+if ($loggedIn) {
+    print "歡迎登機，可信用户。";
+    print '只有在 $loggedIn 為真時才會印出。';
 }
-print "This is also always printed.";
+print "這也總是會印出。";

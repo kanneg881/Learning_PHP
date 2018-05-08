@@ -1,12 +1,12 @@
 <?php
-if ($new_messages == 10) {
-    print "You have ten new messages.";
+if ($newMessages == 10) {
+    print "你有 10 則新訊息。";
 }
 
-if ($new_messages == $max_messages) {
-    print "You have the maximum number of messages.";
+if ($newMessages == $maxMessages) {
+    print "你有最大數量的訊息。";
 }
 
-if ($dinner == 'Braised Scallops') {
-    print "Yum! I love seafood.";
+if ($dinner == '紅燒扇貝') {
+    print "好吃！我喜歡海鮮。";
 }

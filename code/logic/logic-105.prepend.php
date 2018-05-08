@@ -1,1 +1,6 @@
-<?php $first_name = $last_name = 'Bob'; ?>
+<?php
+/**
+ * @var string $firstName 名
+ * @var string $lastName 姓
+ */
+$firstName = $lastName = 'Bob';

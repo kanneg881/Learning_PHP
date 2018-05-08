@@ -1,4 +1,4 @@
 <?php
-if ($logged_in) {
-   print "Welcome aboard, trusted user.";
+if ($loggedIn) {
+   print "歡迎登機，可信用户。";
 }

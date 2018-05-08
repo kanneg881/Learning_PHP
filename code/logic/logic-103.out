@@ -1,4 +1,4 @@
-The string "x54321" is less than the string "x5678".
-The string "54321" is less than the string "5678".
-The string "6 pack" is greater than than the string "55 card stud".
-The string "6 pack" is greater than the number 55.
+字串 "x54321" 比字串 "x5678" 小。
+字串 "54321" 比字串 "5678" 小。
+字串 "6 pack" 比字串 "55 card stud" 大。
+字串 "6 pack" 比數字 55 大。

@@ -1,6 +1,6 @@
 <?php
-if ($logged_in) {
-    print "Welcome aboard, trusted user.";
+if ($loggedIn) {
+    print "歡迎登機，可信用户。";
 } else {
-    print "Howdy, stranger.";
+    print "你好，陌生人。";
 }

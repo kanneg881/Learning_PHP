@@ -1,23 +1,24 @@
 <?php
 
-// $a is a negative number since 1 is less than 12.7
+/** @var int $a 因為 1 比 12.7 小，所以 $a 是負值 */
 $a = 1 <=> 12.7;
 
-// $b is a positive number since "c" comes after "b"
+/** @var int $b 因為字元 "c" 在 "b" 後面，所以 $b 是正值 */
 $b = "charlie" <=> "bob";
 
-// Comparing numeric strings works like < and >, not like strcmp()
+/** @var int $x 進行數值字串比較時，行為同 < 跟 >，不同於 strcmp() */
 $x = '6 pack' <=> '55 card stud';
+
 if ($x > 0) {
-    print 'The string "6 pack" is greater than than the string "55 card stud".';
+    print '字串 "6 pack" 比字串 "55 card stud" 大。';
 } elseif ($x < 0) {
-    print 'The string "6 pack" is less than the string "55 card stud".';
+    print '字串 "6 pack" 比字串 "55 card stud" 小。';
 }
 
-// Comparing numeric strings works like < and >, not like strcmp()
-$x ='6 pack' <=> 55;
+// 進行數值字串比較時，行為同 < 跟 >，不同於 strcmp()
+$x = '6 pack' <=> 55;
 if ($x > 0) {
-    print 'The string "6 pack" is greater than the number 55.';
+    print '字串 "6 pack" 比數字 55 大。';
 } elseif ($x < 0) {
-    print 'The string "6 pack" is less than the number 55.';
+    print '字串 "6 pack" 比數字 55 小。';
 }

@@ -1,8 +1,8 @@
 <?php
-if ($new_messages != 10) {
-    print "You don't have ten new messages.";
+if ($newMessages != 10) {
+    print "你沒有 10 則新訊息。";
 }
 
-if ($dinner != 'Braised Scallops') {
-    print "I guess we're out of scallops.";
+if ($dinner != '紅燒扇貝') {
+    print "我猜我們沒有扇貝了。";
 }

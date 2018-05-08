@@ -1,1 +1,3 @@
-<?php $logged_in = true; ?>
+<?php
+/** @var bool $loggedIn 登入狀態 */
+$loggedIn = true;

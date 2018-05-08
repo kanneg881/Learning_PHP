@@ -1,12 +1,16 @@
 <?php
-// The entire test expression ($finished == false)
-// is true if $finished is false
+/**
+ * 當 $finished 為假時
+ * ($finished == false) 為假
+ */
 if ($finished == false) {
-    print 'Not done yet!';
+    print '還沒做完！';
 }
 
-// The entire test expression (! $finished)
-// is true if $finished is false
-if (! $finished) {
-    print 'Not done yet!';
+/**
+ * 當 $finished 為假時
+ * (!$finished) 為假
+ */
+if (!$finished) {
+    print '還沒做完！';
 }
