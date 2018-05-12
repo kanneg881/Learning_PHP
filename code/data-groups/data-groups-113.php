@@ -1,27 +1,36 @@
 <?php
-$dinner = array('Sweet Corn and Asparagus',
-                'Lemon Chicken',
-                'Braised Bamboo Fungus');
-$meal = array('breakfast' => 'Walnut Bun',
-              'lunch' => 'Cashew Nuts and White Mushrooms',
-              'snack' => 'Dried Mulberries',
-              'dinner' => 'Eggplant with Chili Sauce');
+/** @var array $dinner 晚餐 */
+$dinner = array(
+    '甜玉米和蘆筍',
+    '檸檬雞',
+    '紅燒竹菇'
+);
+/** @var array $meal 餐點 */
+$meal = array(
+    '早餐' => '核桃小圓麵包',
+    '午餐' => '腰果和白蘑菇',
+    '點心' => '桑椹乾',
+    '晚餐' => '茄子配辣椒醬'
+);
 
-print "Before Sorting:\n";
+print "排序之前：\n";
+
 foreach ($dinner as $key => $value) {
-    print " \$dinner: $key $value\n";
+    print " \$晚餐：$key $value\n";
 }
+
 foreach ($meal as $key => $value) {
-    print "   \$meal: $key $value\n";
+    print "   \$餐點：$key $value\n";
 }
 
 sort($dinner);
 sort($meal);
 
-print "After Sorting:\n";
+print "排序之後：\n";
+
 foreach ($dinner as $key => $value) {
-    print " \$dinner: $key $value\n";
+    print " \$晚餐：$key $value\n";
 }
 foreach ($meal as $key => $value) {
-    print "   \$meal: $key $value\n";
+    print "   \$餐點：$key $value\n";
 }

@@ -1,12 +1,12 @@
 <?php
-$dishes['Beef Chow Foon'] = 12;
-$dishes['Beef Chow Foon']++;
-$dishes['Roast Duck'] = 3;
+/** @var array $dishes 料理 */
+$dishes['乾炒牛河'] = 12;
+$dishes['乾炒牛河']++;
+$dishes['烤鴨'] = 3;
 
-$dishes['total'] = $dishes['Beef Chow Foon'] + $dishes['Roast Duck'];
+$dishes['total'] = $dishes['乾炒牛河'] + $dishes['烤鴨'];
 
 if ($dishes['total'] > 15) {
-    print "You ate a lot: ";
+    print "你吃了很多：";
 }
-
-print 'You ate ' . $dishes['Beef Chow Foon'] . ' dishes of Beef Chow Foon.';
+print '你吃了 ' . $dishes['乾炒牛河'] . ' 道乾炒牛河料理。';

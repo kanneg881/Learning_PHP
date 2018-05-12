@@ -1,1 +1,2 @@
-<?php var_dump($vegetables,$fruits);
+<?php
+var_dump($vegetables, $fruits);

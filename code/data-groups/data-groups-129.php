@@ -1,15 +1,18 @@
 <?php
-$meals = array('Walnut Bun' => 1,
-               'Cashew Nuts and White Mushrooms' => 4.95,
-               'Dried Mulberries' => 3.00,
-               'Eggplant with Chili Sauce' => 6.50);
+/** @var array $meals 餐點 */
+$meals = array(
+    '核桃小圓麵包' => 1,
+    '腰果和白蘑菇' => 4.95,
+    '桑椹乾' => 3.00,
+    '茄子配辣椒醬' => 6.50
+);
 
 foreach ($meals as $dish => $price) {
-    // $price = $price * 2 does NOT work
+    // 寫 $price = $price * 2 是沒用的
     $meals[$dish] = $meals[$dish] * 2;
 }
 
-// Iterate over the array again and print the changed values
+// 把改變後的元素值都印出來
 foreach ($meals as $dish => $price) {
-    printf("The new price of %s is \$%.2f.\n",$dish,$price);
+    printf("%s新價錢為 \$%.2f。\n", $dish, $price);
 }
