@@ -1,13 +1,25 @@
 <?php
-$meals = array('breakfast' => ['Walnut Bun','Coffee'],
-               'lunch'     => ['Cashew Nuts', 'White Mushrooms'],
-               'snack'     => ['Dried Mulberries','Salted Sesame Crab']);
+/** @var array $meals 餐點 */
+$meals = array(
+    '早餐' => ['核桃小圓麵包', '咖啡'],
+    '午餐' => ['腰果', '白蘑菇'],
+    '點心' => ['桑椹乾', '鹽漬芝麻蟹']
+);
 
-$lunches = [ ['Chicken','Eggplant','Rice'],
-             ['Beef','Scallions','Noodles'],
-             ['Eggplant','Tofu'] ];
-
-$flavors = array('Japanese' => array('hot' => 'wasabi',
-                                     'salty' => 'soy sauce'),
-                 'Chinese'  => array('hot' => 'mustard',
-                                     'pepper-salty' => 'prickly ash'));
+/** @var array $lunches 午餐 */
+$lunches = [
+    ['雞肉', '茄子', '飯'],
+    ['牛肉', '香蔥', '麵'],
+    ['茄子', '豆腐']
+];
+/** @var array $flavors 口味 */
+$flavors = array(
+    '日式' => array(
+        '辣' => '山葵',
+        '鹽' => '醬油'
+    ),
+    '中式' => array(
+        '辣' => '芥末',
+        '胡椒鹽' => '花椒'
+    )
+);

@@ -1,4 +1,4 @@
 <?php
-for ($i = 0, $num_letters = count($letters); $i < $num_letters; $i++) {
+for ($i = 0, $numberLetters = count($letters); $i < $numberLetters; $i++) {
     print $letters[$i];
 }

@@ -1,10 +1,10 @@
-Before Sorting:
-   $meal: breakfast Walnut Bun
-   $meal: lunch Cashew Nuts and White Mushrooms
-   $meal: snack Dried Mulberries
-   $meal: dinner Eggplant with Chili Sauce
-After Sorting:
-   $meal: lunch Cashew Nuts and White Mushrooms
-   $meal: snack Dried Mulberries
-   $meal: dinner Eggplant with Chili Sauce
-   $meal: breakfast Walnut Bun
+排序之前：
+   $餐點：早餐 核桃小圓麵包
+   $餐點：午餐 腰果和白蘑菇
+   $餐點：點心 桑椹乾
+   $餐點：晚餐 茄子配辣椒醬
+排序之後：
+   $餐點：早餐 核桃小圓麵包
+   $餐點：點心 桑椹乾
+   $餐點：午餐 腰果和白蘑菇
+   $餐點：晚餐 茄子配辣椒醬

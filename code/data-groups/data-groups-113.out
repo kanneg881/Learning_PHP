@@ -1,16 +1,16 @@
-Before Sorting:
- $dinner: 0 Sweet Corn and Asparagus
- $dinner: 1 Lemon Chicken
- $dinner: 2 Braised Bamboo Fungus
-   $meal: breakfast Walnut Bun
-   $meal: lunch Cashew Nuts and White Mushrooms
-   $meal: snack Dried Mulberries
-   $meal: dinner Eggplant with Chili Sauce
-After Sorting:
- $dinner: 0 Braised Bamboo Fungus
- $dinner: 1 Lemon Chicken
- $dinner: 2 Sweet Corn and Asparagus
-   $meal: 0 Cashew Nuts and White Mushrooms
-   $meal: 1 Dried Mulberries
-   $meal: 2 Eggplant with Chili Sauce
-   $meal: 3 Walnut Bun
+排序之前：
+ $晚餐：0 甜玉米和蘆筍
+ $晚餐：1 檸檬雞
+ $晚餐：2 紅燒竹菇
+   $餐點：早餐 核桃小圓麵包
+   $餐點：午餐 腰果和白蘑菇
+   $餐點：點心 桑椹乾
+   $餐點：晚餐 茄子配辣椒醬
+排序之後：
+ $晚餐：0 檸檬雞
+ $晚餐：1 甜玉米和蘆筍
+ $晚餐：2 紅燒竹菇
+   $餐點：0 核桃小圓麵包
+   $餐點：1 桑椹乾
+   $餐點：2 腰果和白蘑菇
+   $餐點：3 茄子配辣椒醬

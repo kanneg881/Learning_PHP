@@ -1,11 +1,14 @@
 <?php
-$specials = array( array('Chestnut Bun', 'Walnut Bun', 'Peanut Bun'),
-                   array('Chestnut Salad','Walnut Salad', 'Peanut Salad') );
+/** @var array $specials 特價 */
+$specials = array(
+    array('栗子小圓麵包', '核桃小圓麵包', '花生小圓麵包'),
+    array('板栗沙拉', '核桃沙拉', '花生沙拉')
+);
 
-// $num_specials is 2: the number of elements in the first dimension of $specials
-for ($i = 0, $num_specials = count($specials); $i < $num_specials; $i++) {
-    // $num_sub is 3: the number of elements in each sub-array
-    for ($m = 0, $num_sub = count($specials[$i]); $m < $num_sub; $m++) {
-        print "Element [$i][$m] is " . $specials[$i][$m] . "\n";
+// 變數 $numberSpecials 值是 2：也就是 $specials 第一維度的元素數量
+for ($i = 0, $numberSpecials = count($specials); $i < $numberSpecials; $i++) {
+    // 變數 $numberSub 值是 3：每個子陣列的元素數量
+    for ($m = 0, $numberSub = count($specials[$i]); $m < $numberSub; $m++) {
+        print "元素 [$i][$m] 是 " . $specials[$i][$m] . "\n";
     }
 }

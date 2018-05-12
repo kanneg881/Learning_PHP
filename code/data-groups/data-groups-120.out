@@ -1,5 +1,7 @@
-string(9) "delicious"
+
+Warning: Cannot use a scalar value as an array in /Applications/MAMP/htdocs/Learning_PHP/code/data-groups/data-groups-120.php on line 23
+string(9) "美味的"
 array(1) {
-  ["potassium"]=>
-  string(6) "banana"
+  ["鉀"]=>
+  string(6) "香蕉"
 }

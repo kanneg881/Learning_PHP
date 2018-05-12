@@ -1,13 +1,20 @@
 <?php
-$flavors = array('Japanese' => array('hot' => 'wasabi',
-                                     'salty' => 'soy sauce'),
-                 'Chinese'  => array('hot' => 'mustard',
-                                     'pepper-salty' => 'prickly ash'));
+/** @var array $flavors 口味 */
+$flavors = array(
+    '日式' => array(
+        '辣' => '山葵',
+        '鹽' => '醬油'
+    ),
+    '中式' => array(
+        '辣' => '芥末',
+        '胡椒鹽' => '花椒'
+    )
+);
 
-// $culture is the key and $culture_flavors is the value (an array)
-foreach ($flavors as $culture => $culture_flavors) {
-    // $flavor is the key and $example is the value
-    foreach ($culture_flavors as $flavor => $example) {
-        print "A $culture $flavor flavor is $example.\n";
+// $culture 是鍵，$cultureFlavors 是值 (它是個陣列)
+foreach ($flavors as $culture => $cultureFlavors) {
+    // $flavor 是鍵，$example 是值
+    foreach ($cultureFlavors as $flavor => $example) {
+        print "$culture{$flavor}口味是{$example}。\n";
     }
 }

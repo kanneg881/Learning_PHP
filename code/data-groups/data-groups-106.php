@@ -1,11 +1,15 @@
 <?php
-$meals = array('Walnut Bun' => 1,
-               'Cashew Nuts and White Mushrooms' => 4.95,
-               'Dried Mulberries' => 3.00,
-               'Eggplant with Chili Sauce' => 6.50,
-               'Shrimp Puffs' => 0);
-
+/** @var array $meals 餐點 */
+$meals = array(
+    '核桃小圓麵包' => 1,
+    '腰果和白蘑菇' => 4.95,
+    '桑椹乾' => 3.00,
+    '茄子配辣椒醬' => 6.50,
+    '泡芙蝦' => 0
+);
+/** @var string $dish 料理名稱 */
 $dish = array_search(6.50, $meals);
+
 if ($dish) {
-    print "$dish costs \$6.50";
+    print "$dish 花費 \$6.50";
 }

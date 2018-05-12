@@ -1,21 +1,27 @@
 <?php
-$meals = array('Walnut Bun' => 1,
-               'Cashew Nuts and White Mushrooms' => 4.95,
-               'Dried Mulberries' => 3.00,
-               'Eggplant with Chili Sauce' => 6.50,
-               'Shrimp Puffs' => 0);
-$books = array("The Eater's Guide to Chinese Characters",
-               'How to Cook and Eat in Chinese');
+/** @var array $meals 餐點 */
+$meals = array(
+    '核桃小圓麵包' => 1,
+    '腰果和白蘑菇' => 4.95,
+    '桑椹乾' => 3.00,
+    '茄子配辣椒醬' => 6.50,
+    '泡芙蝦' => 0
+);
+/** @var array $books 書 */
+$books = array(
+    "The Eater's Guide To Chinese Characters",
+    '如何在中國烹飪和飲食'
+);
 
-// This is true: key Dried Mulberries has value 3.00
+// 這行回傳真：鍵 桑椹乾 的值是 3.00
 if (in_array(3, $meals)) {
-  print 'There is a $3 item.';
+    print '有一個 $3 的項目。';
 }
-// This is true
-if (in_array('How to Cook and Eat in Chinese', $books)) {
-  print "We have How to Cook and Eat in Chinese";
+// 回傳真
+if (in_array('如何在中國烹飪和飲食', $books)) {
+    print "我們有如何在中國烹飪和飲食";
 }
-// This is false: in_array( ) is case-sensitive
+// 回傳假：因為 in_array( ) 會區分大小寫
 if (in_array("the eater's guide to chinese characters", $books)) {
-  print "We have the Eater's Guide to Chinese Characters.";
+    print "我們有 Eater's Guide to Chinese Characters 。";
 }

@@ -1,7 +1,7 @@
 <?php
-$dinner = array('Sweet Corn and Asparagus',
-                'Lemon Chicken',
-                'Braised Bamboo Fungus');
+/** @var array $dinner 晚餐 */
+$dinner = array('甜玉米和蘆筍', '檸檬雞', '紅燒竹菇',);
+
 foreach ($dinner as $dish) {
-    print "You can eat: $dish\n";
+    print "你可以吃：$dish\n";
 }
