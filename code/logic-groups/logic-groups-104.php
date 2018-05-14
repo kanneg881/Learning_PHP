@@ -1,9 +1,22 @@
 <?php
-function restaurant_check2($meal, $tax, $tip) {
-    $tax_amount  = $meal * ($tax / 100);
-    $tip_amount  = $meal * ($tip / 100);
-    $total_notip = $meal + $tax_amount;
-    $total_tip   = $meal + $tax_amount + $tip_amount;
+/**
+ * 餐廳金額計算2
+ *
+ * @param int $meal 餐點
+ * @param float $tax 稅率
+ * @param float $tip 小費
+ * @return array 總金額不包含小費和包含小費
+ */
+function restaurantCheck2($meal, $tax, $tip)
+{
+    /** @var float $taxAmount 稅額 */
+    $taxAmount = $meal * ($tax / 100);
+    /** @var float $tipAmount 小費金額 */
+    $tipAmount = $meal * ($tip / 100);
+    /** @var float $totalNoTip 總金額不包含小費 */
+    $totalNoTip = $meal + $taxAmount;
+    /** @var float $totalTip 總金額包含小費 */
+    $totalTip = $meal + $taxAmount + $tipAmount;
 
-    return array($total_notip, $total_tip);
+    return array($totalNoTip, $totalTip);
 }

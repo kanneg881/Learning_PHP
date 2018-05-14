@@ -1,3 +1,4 @@
 <?php
-$number_to_display = number_format(320853904);
-print "The population of the US is about: $number_to_display";
+/** @var int $numberToDisplay 顯示數字 */
+$numberToDisplay = number_format(23571227);
+print "台灣人口約：$numberToDisplay";

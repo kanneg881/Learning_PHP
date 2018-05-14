@@ -1,2 +1,2 @@
 <?php
-page_header2('cc00cc');
+pageHeader2('cc00cc');

@@ -1,10 +1,14 @@
 <?php
-// Find the total cost of a $15.22 meal with 8.25% tax and a 15% tip
-$total = restaurant_check(15.22, 8.25, 15);
+/**
+ * 算出 $15.22 的肉加上 8.25% 的稅和 15% 的小費後的總金額
+ *
+ * @var float $total
+ */
+$total = restaurantCheck(15.22, 8.25, 15);
 
-print 'I only have $20 in cash, so...';
+print '我只有20元的現金，所以...';
 if ($total > 20) {
-    print "I must pay with my credit card.";
+    print "我必須用我的信用卡支付。";
 } else {
-    print "I can pay with cash.";
+    print "我可以用現金支付。";
 }

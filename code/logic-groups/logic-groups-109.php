@@ -1,15 +1,24 @@
 <?php
-function can_pay_cash($cash_on_hand, $amount) {
-    if ($amount > $cash_on_hand) {
+/**
+ * 是否可以付現
+ *
+ * @param float $cashOnHand 身上的現金
+ * @param float $amount 總金額
+ * @return bool 可以回傳真，否則假
+ */
+function canPayCash($cashOnHand, $amount)
+{
+    if ($amount > $cashOnHand) {
         return false;
     } else {
         return true;
     }
 }
+/** @var float $total 總金額 */
+$total = restaurantCheck(15.22, 8.25, 15);
 
-$total = restaurant_check(15.22,8.25,15);
-if (can_pay_cash(20, $total)) {
-    print "I can pay in cash.";
+if (canPayCash(20, $total)) {
+    print "我可以付現。";
 } else {
-    print "Time for the credit card.";
+    print "是時候使用信用卡了。";
 }

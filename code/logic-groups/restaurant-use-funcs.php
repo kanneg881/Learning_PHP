@@ -1,11 +1,10 @@
 <?php
-
 require 'restaurant-functions.php';
 
-/* $25 check, plus 8.875% tax, plus 20% tip */
-$total_bill = restaurant_check(25, 8.875, 20);
+/** @var float $totalBill 消費 $25 元，加8.875稅，再加 20% 小費 */
+$totalBill = restaurantCheck(25, 8.875, 20);
 
-/* I've got $30 */
+/** @var int $cash 身上現金一共有 $30 元 */
 $cash = 30;
 
-print "I need to pay with " . payment_method($cash, $total_bill);
+print "我需要使用" . paymentMethod($cash, $totalBill) . "付款";

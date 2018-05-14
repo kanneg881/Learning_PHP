@@ -1,4 +1,4 @@
 <?php
-page_header( );
-print "Welcome, $user";
+pageHeader();
+print "歡迎，$user";
 print "</body></html>";
