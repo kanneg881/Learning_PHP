@@ -1,2 +1,2 @@
 <?php
-page_header2( );
+pageHeader2();

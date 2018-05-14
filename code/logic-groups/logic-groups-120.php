@@ -1,2 +1,2 @@
 <?php
-page_header4('66cc66','my homepage');
+pageHeader4('66cc66','我的首頁');

@@ -1,5 +1,9 @@
 <?php
-function page_header( ) {
-    print '<html><head><title>Welcome to my site</title></head>';
+/**
+ * 頁頭
+ */
+function pageHeader()
+{
+    print '<html><head><title>歡迎來到我的網站</title></head>';
     print '<body bgcolor="#ffffff">';
 }

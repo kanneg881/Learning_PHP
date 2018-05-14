@@ -1,8 +1,20 @@
 <?php
-function restaurant_check($meal, $tax, $tip) {
-    $tax_amount = $meal * ($tax / 100);
-    $tip_amount = $meal * ($tip / 100);
-    $total_amount = $meal + $tax_amount + $tip_amount;
+/**
+ * 餐廳金額計算
+ *
+ * @param int $meal 餐點
+ * @param float $tax 稅率
+ * @param float $tip 小費
+ * @return float 總金額
+ */
+function restaurantCheck($meal, $tax, $tip)
+{
+    /** @var float $taxAmount 稅額 */
+    $taxAmount = $meal * ($tax / 100);
+    /** @var float $tipAmount 小費金額 */
+    $tipAmount = $meal * ($tip / 100);
+    /** @var float $totalAmount 總金額 */
+    $totalAmount = $meal + $taxAmount + $tipAmount;
 
-    return $total_amount;
+    return $totalAmount;
 }

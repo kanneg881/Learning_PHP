@@ -1,22 +1,31 @@
 <?php
-$dinner = 'Curry Cuttlefish';
+/** @var string $dinner 晚餐 */
+$dinner = '咖哩魷魚';
 
-function vegetarian_dinner( ) {
-    print "Dinner is $dinner, or ";
-    $dinner = 'Sauteed Pea Shoots';
+/**
+ * 素食晚餐
+ */
+function vegetarianDinner()
+{
+    print "晚餐是{$dinner}，或";
+    $dinner = '炒碗豆筍';
     print $dinner;
     print "\n";
 }
 
-function kosher_dinner( ) {
-    print "Dinner is $dinner, or ";
-    $dinner = 'Kung Pao Chicken';
+/**
+ * 猶太晚餐
+ */
+function kosherDinner()
+{
+    print "晚餐是{$dinner}，或";
+    $dinner = '功夫雞';
     print $dinner;
     print "\n";
 }
 
-print "Vegetarian ";
-vegetarian_dinner( );
-print "Kosher ";
-kosher_dinner( );
-print "Regular dinner is $dinner";
+print "素食";
+vegetarianDinner();
+print "猶太";
+kosherDinner();
+print "定期晚餐是$dinner";

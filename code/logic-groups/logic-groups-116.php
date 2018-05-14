@@ -1,14 +1,22 @@
 <?php
-function page_header( ) {
-    print '<html><head><title>Welcome to my site</title></head>';
+/**
+ * 頁頭
+ */
+function pageHeader()
+{
+    print '<html><head><title>歡迎來到我的網站</title></head>';
     print '<body bgcolor="#ffffff">';
 }
 
-page_header( );
-print "Welcome, $user";
-page_footer( );
+pageHeader();
+print "歡迎，$user";
+pageFooter();
 
-function page_footer( ) {
-    print '<hr>Thanks for visiting.';
+/**
+ * 頁腳
+ */
+function pageFooter()
+{
+    print '<hr>感謝您的光臨。';
     print '</body></html>';
 }

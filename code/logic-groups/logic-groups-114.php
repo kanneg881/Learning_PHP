@@ -1,11 +1,16 @@
 <?php
-$dinner = 'Curry Cuttlefish';
+/** @var string $dinner 晚餐 */
+$dinner = '咖哩魷魚';
 
-function hungry_dinner( ) {
-    $GLOBALS['dinner'] .= ' and Deep-Fried Taro';
+/**
+ * 飢餓晚餐
+ */
+function hungryDinner()
+{
+    $GLOBALS['dinner'] .= '和油炸芋頭';
 }
 
-print "Regular dinner is $dinner";
+print "定期晚餐是$dinner";
 print "\n";
-hungry_dinner( );
-print "Hungry dinner is $dinner";
+hungryDinner();
+print "飢餓晚餐是$dinner";
