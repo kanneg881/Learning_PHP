@@ -1,22 +1,22 @@
 object(Entree)#1 (2) {
   ["name"]=>
-  string(12) "Chicken Soup"
+  string(6) "雞湯"
   ["ingredients"]=>
   array(2) {
     [0]=>
-    string(7) "chicken"
+    string(6) "雞肉"
     [1]=>
-    string(5) "water"
+    string(3) "水"
   }
 }
 object(Entree)#2 (2) {
   ["name"]=>
-  string(16) "Chicken Sandwich"
+  string(15) "雞肉三明治"
   ["ingredients"]=>
   array(2) {
     [0]=>
-    string(7) "chicken"
+    string(6) "雞肉"
     [1]=>
-    string(5) "bread"
+    string(6) "麵包"
   }
 }

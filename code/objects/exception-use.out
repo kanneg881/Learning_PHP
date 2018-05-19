@@ -1,4 +1,5 @@
-PHP Fatal error:  Uncaught Exception: $ingredients 必須是一個陣列 in {{d}}construct-exception.php:19
+
+Fatal error: Uncaught Exception: $ingredients 必須是一個陣列 in {{d}}construct-exception.php:19
 Stack trace:
 #0 {{d}}exception-use.php(3): Entree->__construct('\xE4\xB8\x80\xE6\x9D\xAF\xE7\x89\x9B\xE5\xA5\xB6', '\xE7\x89\x9B\xE5\xA5\xB6')
 #1 {main}

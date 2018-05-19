@@ -4,8 +4,8 @@ use Tiny\Eating\Fruit as Snack;
 
 use Tiny\Fruit;
 
-// This calls \Tiny\Eating\Fruit::munch();
-Snack::munch("strawberry");
+// 這會呼叫 \Tiny\Eating\Fruit::munch();
+Snack::munch("草莓");
 
-// This calls \Tiny\Fruit::munch();
-Fruit::munch("orange");
+// 這會呼叫 \Tiny\Fruit::munch();
+Fruit::munch("柳橙");

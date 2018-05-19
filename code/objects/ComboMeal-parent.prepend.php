@@ -1,1 +1,2 @@
-<?php require __DIR__ . '/Entree.php'; ?>
+<?php
+require __DIR__ . '/Entree.php';

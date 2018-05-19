@@ -1,16 +1,20 @@
 <?php
 
-// Some soup with name and ingredients
-$soup = new Entree('Chicken Soup', array('chicken', 'water'));
+/** @var Entree $soup 一種湯與它的食材 */
+$soup = new Entree('雞湯', array('雞肉', '水'));
 
-// A sandwich with name and ingredients
-$sandwich = new Entree('Chicken Sandwich', array('chicken', 'bread'));
+/** @var Entree $soup 一種三明治與它的食材 */
+$sandwich = new Entree('雞肉三明治', array('雞肉', '麵包'));
 
-// A combo meal
-$combo = new ComboMeal('Soup + Sandwich', array($soup, $sandwich));
+/** @var ComboMeal $combo 一種組合湯與三明治的前菜 */
+try {
+    $combo = new ComboMeal('湯 + 三明治', array($soup, $sandwich));
+} catch (Exception $exception) {
+    echo $exception->getMessage();
+}
 
-foreach (['chicken','water','pickles'] as $ing) {
-    if ($combo->hasIngredient($ing)) {
-        print "Something in the combo contains $ing.\n";
+foreach (['雞肉', '水', '泡菜'] as $ingredient) {
+    if ($combo->hasIngredient($ingredient)) {
+        print "組合中的某些食材包含{$ingredient}。\n";
     }
 }
