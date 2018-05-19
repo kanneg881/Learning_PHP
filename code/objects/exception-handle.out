@@ -1,1 +1,1 @@
-Couldn't create the drink: $ingredients must be an array
+沒辦法建立飲料物件：$ingredients 必須是一個陣列
