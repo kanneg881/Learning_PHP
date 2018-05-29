@@ -1,1 +1,2 @@
-<?php show_form();
+<?php
+showForm();

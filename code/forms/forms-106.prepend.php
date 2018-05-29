@@ -1,1 +1,2 @@
-<?php $_SERVER['PHP_SELF'] = 'order.php';
+<?php
+$_SERVER['PHP_SELF'] = 'order.php';

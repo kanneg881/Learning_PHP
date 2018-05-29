@@ -1,4 +1,4 @@
 <?php
 if (strlen($_POST['email']) == 0) {
-   $errors[] = "You must enter an email address.";
+   $errors[] = "您必須輸入一個電子郵件地址。";
 }

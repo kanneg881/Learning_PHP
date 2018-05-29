@@ -1,14 +1,23 @@
 <?php
-print '<input type="checkbox" name="delivery" value="yes"';
-if ($defaults['delivery'] == 'yes') { print ' checked'; }
-print '> Delivery?';
+print '<input type="checkbox" name="delivery" value="是"';
 
-$checkbox_options = array('small' => 'Small',
-                          'medium' => 'Medium',
-                          'large' => 'Large');
+if ($defaults['delivery'] == '是') {
+    print ' checked';
+}
+print '>送出?';
 
-foreach ($checkbox_options as $value => $label) {
-    print '<input type="radio" name="size" value="'.$value.'"';
-    if ($defaults['size'] == $value) { print ' checked'; }
-    print "> $label ";
+/** @var array $checkboxOptions 複選框選項 */
+$checkboxOptions = array(
+    'small' => '小',
+    'medium' => '中',
+    'large' => '大',
+);
+
+foreach ($checkboxOptions as $value => $label) {
+    print '<input type="radio" name="size" value="' . $value . '"';
+
+    if ($defaults['size'] == $value) {
+        print ' checked';
+    }
+    print ">$label";
 }

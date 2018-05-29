@@ -1,1 +1,2 @@
-<?php $_SERVER['REQUEST_METHOD'] = 'GET';
+<?php
+$_SERVER['REQUEST_METHOD'] = 'GET';

@@ -1,1 +1,2 @@
-<?php $_POST['comments'] = 'I <b>love</b> sweet <div class="fancy">rice</div> & tea.';
+<?php
+$_POST['comments'] = '我<b>愛</b>甜<div class="fancy">飯</div>&茶。';

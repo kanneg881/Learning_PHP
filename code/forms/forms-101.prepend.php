@@ -1,1 +1,2 @@
-<?php $_POST['email'] = 'blub';
+<?php
+$_POST['email'] = 'blub';

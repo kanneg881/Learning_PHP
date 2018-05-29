@@ -1,6 +1,9 @@
 <?php
+/** @var array $input 輸入資料 */
+$input['email'] = filter_input(INPUT_POST, 'email',
+    FILTER_VALIDATE_EMAIL);
 
-$input['email'] = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-if (! $input['email']) {
-    $errors[] = 'Please enter a valid e-mail address';
+if (!$input['email']) {
+    /** @var array $errors 錯誤訊息 */
+    $errors[] = '請輸入有效的電子郵件地址。';
 }

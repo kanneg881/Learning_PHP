@@ -1,22 +1,27 @@
 <?php
-$main_dishes = array('cuke' => 'Braised Sea Cucumber',
-                     'stomach' => "Sauteed Pig's Stomach",
-                     'tripe' => 'Sauteed Tripe with Wine Sauce',
-                     'taro' => 'Stewed Pork with Taro',
-                     'giblets' => 'Baked Giblets with Salt',
-                     'abalone' => 'Abalone with Marrow and Duck Feet');
+/** @var array $mainDishes 主菜 */
+$mainDishes = array(
+    '黃瓜' => '紅燒海參',
+    '胃' => "炒豬的胃",
+    '肚' => '葡萄酒醬炒牛肚',
+    '芋頭' => '芋頭燉豬肉',
+    '內臟' => '鹽焗內臟',
+    '鮑魚' => '鮑魚骨髓和鴨掌'
+);
 
-print '<select name="main_dish[]" multiple>';
+print '<select name="mainDish[]" multiple>';
+/** @var array $selectedOptions 選單的選項 */
+$selectedOptions = array();
 
-$selected_options = array( );
-foreach ($defaults['main_dish'] as $option) {
-    $selected_options[$option] = true;
+foreach ($defaults['mainDish'] as $option) {
+    $selectedOptions[$option] = true;
 }
 
-// print out the <option> tags
-foreach ($main_dishes as $option => $label) {
+// 印出 <option> 標籤
+foreach ($mainDishes as $option => $label) {
     print '<option value="' . htmlentities($option) . '"';
-    if (array_key_exists($option, $selected_options)) {
+
+    if (array_key_exists($option, $selectedOptions)) {
         print ' selected';
     }
     print '>' . htmlentities($label) . '</option>';

@@ -1,31 +1,49 @@
 <form method="POST" action="{{d}}complete.php">
-<table>
-    
-    <tr><td>Your Name:</td><td><input name="name" type="text" /></td></tr>
+    <table>
+                <tr>
+            <td>你的名字：</td>
+            <td><input name='name' type='text' /></td>
+        </tr>
 
-    <tr><td>Size:</td>
-        <td><input name="size" value="medium" type="radio" /> Small <br/>
-            <input name="size" value="medium" type="radio" checked /> Medium <br/>
-            <input name="size" value="medium" type="radio" /> Large <br/>
-        </td></tr>
+        <tr>
+            <td>尺寸：</td>
+            <td>
+                <input name='size' value='中' type='radio' /> 小 <br>
+                <input name='size' value='中' type='radio' checked /> 中 <br>
+                <input name='size' value='中' type='radio' /> 大 <br>
+            </td>
+        </tr>
 
-    <tr><td>Pick one sweet item:</td>
-        <td><select name="sweet"><option  value="puff">Sesame Seed Puff</option><option  value="square">Coconut Milk Gelatin Square</option><option  value="cake">Brown Sugar Cake</option><option  value="ricemeat">Sweet Rice and Meat</option></select></td>
-    </tr>
+        <tr>
+            <td>選擇一項甜點：</td>
+            <td><select name='sweet'><option value='鬆餅'>芝麻鬆餅</option><option value='方形'>方形椰奶凝膠</option><option value='蛋糕'>黑糖蛋糕</option><option value='米肉'>甜米飯和肉</option></select></td>
+        </tr>
 
-    <tr><td>Pick two main dishes:</td>
-        <td><select name="main_dish[]" multiple><option  value="cuke">Braised Sea Cucumber</option><option  value="stomach">Sauteed Pig's Stomach</option><option  value="tripe">Sauteed Tripe with Wine Sauce</option><option  value="taro">Stewed Pork with Taro</option><option  value="giblets">Baked Giblets with Salt</option><option  value="abalone">Abalone with Marrow and Duck Feet</option></select></td>
-    </tr>
+        <tr>
+            <td>選擇兩道主菜：</td>
+            <td>
+                <select name='mainDish[]' multiple><option value='黃瓜'>紅燒海參</option><option value='胃'>炒豬的胃</option><option value='肚'>葡萄酒醬炒牛肚</option><option value='芋頭'>芋頭燉豬肉</option><option value='內臟'>鹽焗內臟</option><option value='鮑魚'>鮑魚骨髓和鴨掌</option></select>            </td>
+        </tr>
 
-    <tr><td>Do you want your order delivered?</td>
-        <td><input name="delivery" value="yes" type="checkbox" checked /> Yes
-        </td></tr>
+        <tr>
+            <td>你想要你的訂單送出嗎？</td>
+            <td>
+                <input name='delivery' value='是' type='checkbox' checked /> 是
+            </td>
+        </tr>
 
-    <tr><td>Enter any special instructions.<br/>
-        If you want your order delivered, put your address here:</td>
-        <td><textarea name="comments"></textarea></td></tr>
+        <tr>
+            <td>
+                輸入任何特殊說明。<br>
+                如果您希望送出您的訂單，請在此處填寫您的地址：
+            </td>
+            <td><textarea name='comments'></textarea></td>
+        </tr>
 
-    <tr><td colspan="2" align="center"><input value="Order" type="submit" />    </td></tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input value='Order' type='submit' />            </td>
+        </tr>
 
-</table>
+    </table>
 </form>

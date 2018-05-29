@@ -1,1 +1,2 @@
-<?php $defaults['main_dish'] = array('cuke','taro');
+<?php
+$defaults['mainDish'] = array('黃瓜','芋頭');
