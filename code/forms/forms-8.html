@@ -1,19 +1,28 @@
 <form method="POST" action="order.php">
-Braised Noodles with: <select name="noodle">
-<option>crab meat</option>
-<option>mushroom</option>
-<option>barbecued pork</option>
-<option>shredded ginger and green onion</option>
-</select>
-<br/>
-Sweet: <select name="sweet[]" multiple>
-<option value="puff"> Sesame Seed Puff
-<option value="square"> Coconut Milk Gelatin Square
-<option value="cake"> Brown Sugar Cake
-<option value="ricemeat"> Sweet Rice and Meat
-</select>
-<br/>
-Sweet Quantity: <input type="text" name="sweet_q">
-<br/>
-<input type="submit" name="submit" value="Order">
+    <label>
+        紅燒拉麵附上：
+        <select name="noodle">
+            <option>蟹肉</option>
+            <option>蘑菇</option>
+            <option>烤豬肉</option>
+            <option>切碎的薑和蔥</option>
+        </select>
+    </label>
+    <br/>
+    <label>
+        甜點：
+        <select name="sweet[]" multiple>
+            <option value="puff"> 芝麻泡芙
+            <option value="square"> 椰奶果凍
+            <option value="cake"> 黑糖蛋糕
+            <option value="riceMeat"> 甜米飯和肉
+        </select>
+    </label>
+    <br/>
+    <label>
+        甜度：
+        <input type="text" name="sweetQuantity">
+    </label>
+    <br/>
+    <input type="submit" name="submit" value="訂購">
 </form>

@@ -1,1 +1,2 @@
-<?php $_POST['name'] = 'beep toot';
+<?php
+$_POST['name'] = 'beep toot';

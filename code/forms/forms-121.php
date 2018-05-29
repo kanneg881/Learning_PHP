@@ -1,36 +1,46 @@
 <?php
-// Logic to do the right thing based on
-// the request method
+// 識別 request 方法以執行對應工作
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (validate_form( )) {
-        process_form( );
+    if (validateForm()) {
+        processForm();
     } else {
-        show_form( );
+        showForm();
     }
 } else {
-    show_form( );
+    showForm();
 }
 
-// Do something when the form is submitted
-function process_form( ) {
-    print "Hello, ". $_POST['my_name'];
+/**
+ * 當表單送出時執行
+ */
+function processForm(): void
+{
+    print "你好，" . $_POST['myName'];
 }
 
-// Display the form
-function show_form( ) {
+/**
+ * 顯示表單
+ */
+function showForm(): void
+{
     print<<<_HTML_
 <form method="POST" action="$_SERVER[PHP_SELF]">
-Your name: <input type="text" name="my_name">
-<br/>
-<input type="submit" value="Say Hello">
+你的名字：<input type="text" name="myName">
+<br>
+<input type="submit" value="打招呼">
 </form>
 _HTML_;
 }
 
-// Check the form data
-function validate_form( ) {
-    // Is my_name at least 3 characters long?
-    if (strlen($_POST['my_name']) < 3) {
+/**
+ * 驗證表單
+ *
+ * @return bool 驗證是否成功
+ */
+function validate_form(): bool
+{
+    // myName 長度是否大於3個字
+    if (strlen($_POST['myName']) < 3) {
         return false;
     } else {
         return true;

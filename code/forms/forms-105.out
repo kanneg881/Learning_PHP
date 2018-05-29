@@ -1,11 +1,11 @@
 <form method="post" action="order.php">
-Your Order: <select name="order">
-<option>Sesame Seed Puff</option>
-<option>Coconut Milk Gelatin Square</option>
-<option>Brown Sugar Cake</option>
-<option>Sweet Rice and Meat</option>
+你的訂單：<select name="order">
+<option>芝麻鬆餅</option>
+<option>方形椰奶凝膠</option>
+<option>黑糖蛋糕</option>
+<option>甜米飯和肉</option>
 
 </select>
 <br/>
-<input type="submit" value="Order">
+<input type="submit" value="訂購">
 </form>

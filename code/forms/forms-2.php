@@ -1,3 +1,3 @@
 <?php
-$_POST['lunch'][] = 'chicken';
-$_POST['lunch'][] = 'nest';
+$_POST['lunch'][] = '雞肉';
+$_POST['lunch'][] = '窩';

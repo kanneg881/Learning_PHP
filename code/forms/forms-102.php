@@ -1,4 +1,5 @@
 <?php
 if (strlen(trim($_POST['name'])) == 0) {
-    $errors[] = "Your name is required.";
+    /** @var array 錯誤訊息 */
+    $errors[] = "你必需填入姓名。";
 }

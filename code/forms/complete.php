@@ -1,117 +1,163 @@
 <?php
 
-// This assumes FormHelper.php is in the same directory as
-// this file.
+/**
+ * 這行引入假設 FormHelper.php 跟目前檔案在同一個目錄下。
+ */
 require 'FormHelper.php';
 
-// setup the arrays of choices in the select menus
-// these are needed in display_form( ), validate_form( ),
-// and process_form( ), so they are declared in the global scope
-$sweets = array('puff' => 'Sesame Seed Puff',
-                'square' => 'Coconut Milk Gelatin Square',
-                'cake' => 'Brown Sugar Cake',
-                'ricemeat' => 'Sweet Rice and Meat');
+/**
+ * 甜點
+ * 為選單建立選項陣列
+ * 這些陣列會在 display_form()、validateForm()、
+ * 還有 processForm() 被使用，所以定義全域變數。
+ *
+ * @var array $sweets
+ */
+$sweets = array(
+    '鬆餅' => '芝麻鬆餅',
+    '方形' => '方形椰奶凝膠',
+    '蛋糕' => '黑糖蛋糕',
+    '米肉' => '甜米飯和肉'
+);
+/** @var array $mainDishes 主菜 */
+$mainDishes = array(
+    '黃瓜' => '紅燒海參',
+    '胃' => "炒豬的胃",
+    '肚' => '葡萄酒醬炒牛肚',
+    '芋頭' => '芋頭燉豬肉',
+    '內臟' => '鹽焗內臟',
+    '鮑魚' => '鮑魚骨髓和鴨掌'
+);
 
-$main_dishes = array('cuke' => 'Braised Sea Cucumber',
-                     'stomach' => "Sauteed Pig's Stomach",
-                     'tripe' => 'Sauteed Tripe with Wine Sauce',
-                     'taro' => 'Stewed Pork with Taro',
-                     'giblets' => 'Baked Giblets with Salt',
-                     'abalone' => 'Abalone with Marrow and Duck Feet');
-
-// The main page logic:
-// - If the form is submitted, validate and then process or redisplay
-// - If it's not submitted, display
+/**
+ * 主要頁面的程式邏輯是：
+ * - 如果表單是送出的，那就驗證資料，然後處理或顯示
+ * - 如果表單不是送出的，那就顯示
+ */
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // If validate_form( ) returns errors, pass them to show_form( )
-    list($errors, $input) = validate_form();
+    // 如果 validateForm() 回傳錯誤，把錯誤傳給 show_form()
+    list($errors, $input) = validateForm();
+
     if ($errors) {
-        show_form($errors);
+        showForm($errors);
     } else {
-        // The submitted data is valid, so process it
-        process_form($input);
+        // 如果送出的資料正確，那接著進行處理
+        processForm($input);
     }
 } else {
-    // The form wasn't submitted, so display
-    show_form();
+    // 如果不是表單送出，直接顯示
+    showForm();
 }
 
-function show_form($errors = array()) {
-    $defaults = array('delivery' => 'yes',
-                      'size'     => 'medium');
-    // Set up the $form object with proper defaults
+/**
+ * 顯示表單
+ *
+ * @param array $errors 錯誤訊息
+ */
+function showForm(array $errors = array()): void
+{
+    /** @var array $defaults 預設值 */
+    $defaults = array(
+        'delivery' => '是',
+        'size' => '中'
+    );
+    /** @var FormHelper $form 表單 */
     $form = new FormHelper($defaults);
 
-    // All the HTML and form display is in a separate file for clarity
+    // 所有 HTML 還有表單的顯示程式碼都清楚地分開存放在不同檔案
     include 'complete-form.php';
 }
 
-function validate_form( ) {
+/**
+ * 驗證表單
+ *
+ * @return array 錯誤訊息和輸入資料
+ */
+function validateForm(): array
+{
+    /** @var array $input 輸入資料 */
     $input = array();
-    $errors = array( );
+    /** @var array $errors 錯誤訊息 */
+    $errors = array();
 
-    // name is required
+    // name 是必要欄位
     $input['name'] = trim($_POST['name'] ?? '');
-    if (! strlen($input['name'])) {
-        $errors[] = 'Please enter your name.';
+
+    if (!strlen($input['name'])) {
+        $errors[] = '請輸入你的名字。';
     }
-    // size is required
+    // size 是必要欄位
     $input['size'] = $_POST['size'] ?? '';
-    if (! in_array($input['size'], ['small','medium','large'])) {
-        $errors[] = 'Please select a size.';
+
+    if (!in_array($input['size'], ['小', '中', '大'])) {
+        $errors[] = '請選擇一個尺寸。';
     }
-    // sweet is required
+    // sweet 是必要欄位
     $input['sweet'] = $_POST['sweet'] ?? '';
-    if (! array_key_exists($input['sweet'], $GLOBALS['sweets'])) {
-        $errors[] = 'Please select a valid sweet item.';
+
+    if (!array_key_exists($input['sweet'], $GLOBALS['sweets'])) {
+        $errors[] = '請選擇一個有效的甜品。';
     }
-    // exactly two main dishes required
-    $input['main_dish'] = $_POST['main_dish'] ?? array();
-    if (count($input['main_dish']) != 2) {
-        $errors[] = 'Please select exactly two main dishes.';
+    // 主菜要有2個
+    $input['mainDish'] = $_POST['mainDish'] ?? array();
+
+    if (count($input['mainDish']) != 2) {
+        $errors[] = '請選擇兩道主菜。';
     } else {
-        // We know there are two main dishes selected, so make sure they are
-        // both valid
-        if (! (array_key_exists($input['main_dish'][0], $GLOBALS['main_dishes']) &&
-               array_key_exists($input['main_dish'][1], $GLOBALS['main_dishes']))) {
-            $errors[] = 'Please select exactly two valid main dishes.';
+        // 已知選好兩個主菜了，現在確保兩個主菜都是 ok 的
+        if (!(array_key_exists($input['mainDish'][0], $GLOBALS['mainDishes']) &&
+            array_key_exists($input['mainDish'][1], $GLOBALS['mainDishes']))) {
+            $errors[] = '請選擇兩道有效的主菜。';
         }
     }
-    // if delivery is checked, then comments must contain something
-    $input['delivery'] = $_POST['delivery'] ?? 'no';
+    // 如果 delivery 被選了，那 comments 就一定要有內容
+    $input['delivery'] = $_POST['delivery'] ?? '否';
     $input['comments'] = trim($_POST['comments'] ?? '');
-    if (($input['delivery'] == 'yes') && (! strlen($input['comments']))) {
-        $errors[] = 'Please enter your address for delivery.';
+
+    if ($input['delivery'] == '是' && !strlen($input['comments'])) {
+        $errors[] = '請輸入您的地址以便交付。';
     }
 
     return array($errors, $input);
 }
 
-function process_form($input) {
-    // look up the full names of the sweet and the main dishes in
-    // the $GLOBALS['sweets'] and $GLOBALS['main_dishes'] arrays
-    $sweet = $GLOBALS['sweets'][ $input['sweet'] ];
-    $main_dish_1 = $GLOBALS['main_dishes'][ $input['main_dish'][0] ];
-    $main_dish_2 = $GLOBALS['main_dishes'][ $input['main_dish'][1] ];
-    if (isset($input['delivery']) && ($input['delivery'] == 'yes')) {
-        $delivery = 'do';
+/**
+ * 處理表單
+ *
+ * @param array $input 輸入資料
+ */
+function processForm($input)
+{
+    // 在 $GLOBALS['sweets'] 和 $GLOBALS['main_dishes'] 陣列裡找甜點跟主菜的全名
+    /** @var string $sweet 甜點全名 */
+    $sweet = $GLOBALS['sweets'][$input['sweet']];
+    /** @var string $mainDish1 主菜全名 */
+    $mainDish1 = $GLOBALS['mainDishes'][$input['mainDish'][0]];
+    /** @var string $mainDish2 主菜全名 */
+    $mainDish2 = $GLOBALS['mainDishes'][$input['mainDish'][1]];
+
+    if (isset($input['delivery']) && ($input['delivery'] == '是')) {
+        /** @var string $delivery 要或不要訊息 */
+        $delivery = '要';
     } else {
-        $delivery = 'do not';
+        $delivery = '不要';
     }
-    // build up the text of the order message
-    $message=<<<_ORDER_
-Thank you for your order, {$input['name']}.
-You requested the {$input['size']} size of $sweet, $main_dish_1, and $main_dish_2.
-You $delivery want delivery.
+    /** @var string $message 建立點菜訊息 */
+    $message = <<<_ORDER_
+謝謝您的訂單，{$input['name']}。
+你要求大小為{$input['size']}的{$sweet}，{$mainDish1}，和{$mainDish2}。
+你{$delivery}送出。
 _ORDER_;
+
     if (strlen(trim($input['comments']))) {
-        $message .= 'Your comments: '.$input['comments'];
+        $message .= '你的評論：' . $input['comments'];
     }
 
-    // send the message to the chef
-    mail('chef@restaurant.example.com', 'New Order', $message);
-    // print the message, but encode any HTML entities
-    // and turn newlines into <br/> tags
+    // 發送消息給廚師
+    mail('chef@restaurant.example.com', '新訂單', $message);
+    /**
+     * 編碼 HTML 並印出訊息
+     * 把換行字元轉換成 <br> 標籤
+     */
     print nl2br(htmlentities($message, ENT_HTML5));
 }
-?>

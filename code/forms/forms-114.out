@@ -1,5 +1,5 @@
-<select name="sweet"><option value="puff"> Sesame Seed Puff</option>
-<option value="square" selected> Coconut Milk Gelatin Square</option>
-<option value="cake"> Brown Sugar Cake</option>
-<option value="ricemeat"> Sweet Rice and Meat</option>
+<select name="sweet"><option value="鬆餅">芝麻鬆餅</option>
+<option value="方形" selected>方形椰奶凝膠</option>
+<option value="蛋糕">黑糖蛋糕</option>
+<option value="米肉">甜米飯和肉</option>
 </select>

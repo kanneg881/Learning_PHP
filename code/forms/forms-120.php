@@ -1,24 +1,29 @@
 <?php
-// Logic to do the right thing based on
-// the request method
+// 識別 request 方法以執行對應工作
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    process_form( );
+    processForm();
 } else {
-    show_form( );
+    showForm();
 }
 
-// Do something when the form is submitted
-function process_form( ) {
-    print "Hello, ". $_POST['my_name'];
+/**
+ * 當表單送出時執行
+ */
+function processForm(): void
+{
+    print "你好，" . $_POST['myName'];
 }
 
-// Display the form
-function show_form( ) {
+/**
+ * 顯示表單
+ */
+function showForm(): void
+{
     print<<<_HTML_
 <form method="POST" action="$_SERVER[PHP_SELF]">
-Your name: <input type="text" name="my_name">
-<br/>
-<input type="submit" value="Say Hello">
+你的名字：<input type="text" name="myName">
+<br>
+<input type="submit" value="打招呼">
 </form>
 _HTML_;
 }

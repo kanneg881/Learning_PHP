@@ -1,19 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
 <form method="POST" action="eat.php">
-<select name="lunch[]" multiple>
-<option value="pork">BBQ Pork Bun</option>
-<option value="chicken">Chicken Bun</option>
-<option value="lotus">Lotus Seed Bun</option>
-<option value="bean">Bean Paste Bun</option>
-<option value="nest">Bird-Nest Bun</option>
-</select>
-<input type="submit" name="submit">
+    <label>
+        <select name="lunch[]" multiple>
+            <option value="pork">燒烤豬肉麵包</option>
+            <option value="chicken">雞包子</option>
+            <option value="lotus">蓮茸包</option>
+            <option value="bean">豆沙包</option>
+            <option value="nest">鳥巢饅頭</option>
+        </select>
+    </label>
+    <input type="submit" name="submit">
 </form>
-Selected buns:
+</body>
+</html>
+選擇的包子：
 <br/>
 <?php
 if (isset($_POST['lunch'])) {
     foreach ($_POST['lunch'] as $choice) {
-        print "You want a $choice bun. <br/>";
+        print "你想要一個{$choice}。<br/>";
     }
 }
 ?>

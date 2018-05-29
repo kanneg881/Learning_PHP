@@ -1,50 +1,64 @@
 <?php
-// Logic to do the right thing based on
-// the request method
+// 識別 request 方法以執行對應工作
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // If validate_form( ) returns errors, pass them to show_form( )
-    if ($form_errors = validate_form( )) {
-        show_form($form_errors);
+    // 如果 validate_form() 回傳錯誤，將錯誤訊息傳給 show_form()
+    if ($form_errors = validateForm()) {
+        showForm($form_errors);
     } else {
-        process_form( );
+        processForm();
     }
 } else {
-    show_form( );
+    showForm();
 }
 
-// Do something when the form is submitted
-function process_form( ) {
-    print "Hello, ". $_POST['my_name'];
+/**
+ * 送出表單時執行
+ */
+function processForm(): void
+{
+    print "你好，" . $_POST['myName'];
 }
 
-// Display the form
-function show_form($errors = array()) {
-    // If some errors were passed in, print them out
+/**
+ * 顯示表單
+ *
+ * @param array $errors 錯誤訊息
+ */
+function showForm(array $errors = array()): void
+{
+    // 如果有錯誤傳入就印出
     if ($errors) {
-        print 'Please correct these errors: <ul><li>';
+        print '請更正這些錯誤：<ul><li>';
         print implode('</li><li>', $errors);
         print '</li></ul>';
     }
 
     print<<<_HTML_
 <form method="POST" action="$_SERVER[PHP_SELF]">
-Your name: <input type="text" name="my_name">
-<br/>
-<input type="submit" value="Say Hello">
+你的名字：<input type="text" name="myName">
+<br>
+<input type="submit" value="打招呼">
 </form>
 _HTML_;
 }
 
-// Check the form data
-function validate_form( ) {
-    // Start with an empty array of error messages
-    $errors = array( );
+/**
+ * 檢驗表單資料
+ *
+ * @return array 錯誤訊息
+ */
+function validateForm(): array
+{
+    /** @var array $errors 錯誤訊息 */
+    $errors = array();
 
-    // Add an error message if the name is too short
-    if (strlen($_POST['my_name']) < 3) {
-        $errors[  ] = 'Your name must be at least 3 letters long.';
+    /**
+     * 如果名字太短的話，就加入錯誤訊息
+     */
+    if (strlen($_POST['myName']) < 3) {
+        $errors[] = '你的姓名必須至少3個字母。';
     }
 
-    // Return the (possibly empty) array of error messages
+    // 回傳錯誤值陣列（也可能是空的）
     return $errors;
 }

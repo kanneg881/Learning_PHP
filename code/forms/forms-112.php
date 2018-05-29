@@ -1,3 +1,3 @@
 <?php
-print '<input type="text" name="my_name" value="' .
-      htmlentities($defaults['my_name']). '">';
+print '<input type="text" name="myName" value="' .
+    htmlentities($defaults['myName']) . '">';

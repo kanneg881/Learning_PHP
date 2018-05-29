@@ -1,1 +1,3 @@
-<?php $defaults['my_name'] = 'florpy';
+<?php
+/** @var array $defaults 預設值 */
+$defaults['myName'] = 'florpy';

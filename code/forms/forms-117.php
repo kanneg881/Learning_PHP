@@ -1,14 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
 <form method="POST" action="catalog.php">
-<input type="text" name="product_id">
-<select name="category">
-<option value="ovenmitt">Pot Holder</option>
-<option value="fryingpan">Frying Pan</option>
-<option value="torch">Kitchen Torch</option>
-</select>
-<input type="submit" name="submit">
+    <label>
+        <input type="text" name="product_id">
+    </label>
+    <label>
+        <select name="category">
+            <option value="ovenmitt">鍋架</option>
+            <option value="fryingpan">平底鍋</option>
+            <option value="torch">廚房火炬</option>
+        </select>
+    </label>
+    <input type="submit" name="submit">
 </form>
-Here are the submitted values:
+</body>
+</html>
+這裡是提交的值：
 
-product_id: <?php print $_POST['product_id'] ?? '' ?>
-<br/>
-category: <?php print $_POST['category'] ?? '' ?>
+product_id： <?= $_POST['product_id'] ?? '' ?>
+<br>
+category：<?= $_POST['category'] ?? '' ?>
