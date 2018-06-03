@@ -1,4 +1,4 @@
-PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in {{!}}:4
+Fatal error: Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in {{!}}:4
 Stack trace:
 #0 {{!}}(4): PDO->__construct('mysql:host=db.e...', 'penguin', 'top^hat')
 #1 {main}

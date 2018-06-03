@@ -1,1 +1,2 @@
-UPDATE dishes SET price = price * 2
+UPDATE dishes
+SET price = price * 2;

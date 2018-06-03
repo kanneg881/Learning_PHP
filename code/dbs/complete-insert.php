@@ -1,90 +1,122 @@
 <?php
 
-// Load the form helper class
+// 引入 form helper 類別
 require 'FormHelper.php';
 
-// Connect to the database
+// 連結資料夾
 try {
-    $db = new PDO('sqlite:/tmp/restaurant.db');
-} catch (PDOException $e) {
-    print "Can't connect: " . $e->getMessage();
+    /** @var PDO $database PDO 物件 */
+    $database = new PDO('sqlite:/tmp/restaurant.db');
+} catch (PDOException $exception) {
+    print "無法連線：" . $exception->getMessage();
     exit();
 }
-// Set up exceptions on DB errors
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// 設定資料庫出錯時丟出例外
+$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// The main page logic:
-// - If the form is submitted, validate and then process or redisplay
-// - If it's not submitted, display
+/**
+ * 主要頁面邏輯是：
+ * - 如果是送出表單的話，驗證、處理或顯示
+ * - 如果還沒送出，顯示
+ */
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // If validate_form( ) returns errors, pass them to show_form( )
-    list($errors, $input) = validate_form();
+    /**
+     * 如果 validateForm() 回傳錯誤，那把錯誤傳給 showForm()
+     *
+     * @var array $errors 錯誤訊息
+     * @var array $input 輸入資料
+     */
+    list($errors, $input) = validateForm();
+
     if ($errors) {
-        show_form($errors);
+        showForm($errors);
     } else {
-        // The submitted data is valid, so process it
-        process_form($input);
+        // 驗證過了ok，進行處理
+        processForm($input);
     }
 } else {
-    // The form wasn't submitted, so display
-    show_form();
+    // 還沒送出的表單，就顯示吧
+    showForm();
 }
 
-function show_form($errors = array()) {
-    // Set our own defaults: price is $5
+/**
+ * 顯示表單
+ *
+ * @param array $errors 錯誤訊息
+ */
+function showForm(array $errors = array()): void
+{
+    /** @var array $defaults 設定預設值 price 等於5 */
     $defaults = array('price' => '5.00');
 
-    // Set up the $form object with proper defaults
+    /** @var FormHelper $form 表單輔助物件，設定預設值 */
     $form = new FormHelper($defaults);
 
-    // All the HTML and form display is in a separate file for clarity
+    // 所有 HTML 跟表單顯示都在各自檔案中
     include 'insert-form.php';
 }
 
-function validate_form() {
+/**
+ * 驗證表單
+ *
+ * @return array 錯誤訊息，輸入資料
+ */
+function validateForm(): array
+{
+    /** @var array $input 輸入資料 */
     $input = array();
+    /** @var array $errors 錯誤訊息 */
     $errors = array();
 
-    // dish_name is required
+    // dish_name 是必要欄位
     $input['dish_name'] = trim($_POST['dish_name'] ?? '');
-    if (! strlen($input['dish_name'])) {
-        $errors[] = 'Please enter the name of the dish.';
+
+    if (!strlen($input['dish_name'])) {
+        $errors[] = '請輸入菜名。';
     }
 
-    // price must be a valid floating point number and
-    // more than 0
-    $input['price'] = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+    /**
+     * price 必須是合法的浮點數
+     * 並且要大於0
+     */
+    $input['price'] = filter_input(INPUT_POST, 'price',
+        FILTER_VALIDATE_FLOAT);
     if ($input['price'] <= 0) {
-        $errors[] = 'Please enter a valid price.';
+        $errors[] = '請輸入有效的價格。';
     }
 
-    // is_spicy defaults to 'no'
-    $input['is_spicy'] = $_POST['is_spicy'] ?? 'no';
+    // is_spicy 的預設值是 'no'
+    $input['is_spicy'] = $_POST['is_spicy'] ?? '不';
 
     return array($errors, $input);
 }
 
-function process_form($input) {
-    // Access the global variable $db inside this function
-    global $db;
+/**
+ * 處理表單
+ *
+ * @param array $input 輸入資料
+ */
+function processForm(array $input): void
+{
+    // 在函式中存取全域變數 $database
+    global $database;
 
-    // Set the value of $is_spicy based on the checkbox
-    if ($input['is_spicy'] == 'yes') {
+    // 照核取方塊的值設定 $is_spicy
+    if ($input['is_spicy'] == '是') {
         $is_spicy = 1;
     } else {
         $is_spicy = 0;
     }
 
-    // Insert the new dish into the table
+    // 新增新菜到資料表中
     try {
-        $stmt = $db->prepare('INSERT INTO dishes (dish_name, price, is_spicy)
-                              VALUES (?,?,?)');
-        $stmt->execute(array($input['dish_name'], $input['price'],$is_spicy));
-        // Tell the user that we added a dish.
-        print 'Added ' . htmlentities($input['dish_name']) . ' to the database.';
-    } catch (PDOException $e) {
-        print "Couldn't add your dish to the database.";
+        /** @var PDOStatement $statement pdo 聲明 */
+        $statement = $database->prepare('INSERT INTO dishes 
+          (dish_name, price, is_spicy) VALUES (?,?,?)');
+        $statement->execute(array($input['dish_name'], $input['price'], $is_spicy));
+        // 告訴使用者我們加了什麼
+        print '新增了 ' . htmlentities($input['dish_name']) . ' 到資料庫。';
+    } catch (PDOException $exception) {
+        print "無法將您的菜新增到資料庫。";
     }
 }
-
-?>

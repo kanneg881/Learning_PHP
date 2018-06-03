@@ -1,1 +1,4 @@
-SELECT dish_name, price FROM dishes
+SELECT
+  dish_name,
+  price
+FROM dishes;

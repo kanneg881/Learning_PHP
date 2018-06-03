@@ -1,1 +1,1 @@
-DELETE FROM dishes
+DELETE FROM dishes;

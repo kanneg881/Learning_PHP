@@ -1,1 +1,2 @@
-SELECT * FROM dishes
+SELECT *
+FROM dishes;

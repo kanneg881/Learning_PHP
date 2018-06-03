@@ -1,5 +1,5 @@
 <?php
-
-$cheapest_dish_info = $db->query('SELECT dish_name, price
-                                   FROM dishes ORDER BY price LIMIT 1')->fetch();
-print "$cheapest_dish_info[0], $cheapest_dish_info[1]";
+/** @var mixed $cheapestDishInfo 最便宜的菜資訊 */
+$cheapestDishInfo = $database->query('SELECT dish_name, price
+                                      FROM dishes ORDER BY price LIMIT 1')->fetch();
+print "$cheapestDishInfo[0], $cheapestDishInfo[1]";

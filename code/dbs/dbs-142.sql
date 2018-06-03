@@ -1,1 +1,1 @@
-DROP TABLE dishes
+DROP TABLE dishes;

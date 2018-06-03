@@ -1,129 +1,168 @@
 <?php
-
-// Load the form helper class
+// 載入 form helper 類別
 require 'FormHelper.php';
 
-// Connect to the database
+// 連結資料庫
 try {
-    $db = new PDO('sqlite:/tmp/restaurant.db');
-} catch (PDOException $e) {
-    print "Can't connect: " . $e->getMessage();
+    /** @var PDO $database pdo 物件 */
+    $database = new PDO('sqlite:/tmp/restaurant.db');
+} catch (PDOException $exception) {
+    print "無法連線：" . $exception->getMessage();
     exit();
 }
-// Set up exceptions on DB errors
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// 設定資料庫錯誤時的例外
+$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// Set up fetch mode: rows as objects
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+// 使用 fetch mode：使用物件
+$database->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-// Choices for the "spicy" menu in the form
-$spicy_choices = array('no','yes','either');
+/** @var array $spicyChoices 表單中 "spicy" 選單中的選項 */
+$spicyChoices = array('不', '是', '兩種');
 
-// The main page logic:
-// - If the form is submitted, validate and then process or redisplay
-// - If it's not submitted, display
+/**
+ * 主要程式邏輯：
+ * - 如果是送出表單，執行驗證，然後執行處理或顯示
+ * - 如果不是送出的表單，那就顯示
+ */
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // If validate_form( ) returns errors, pass them to show_form( )
-    list($errors, $input) = validate_form();
+    // 如果 validateForm() 回傳錯誤，將錯誤傳到 showForm()
+    list($errors, $input) = validateForm();
+
     if ($errors) {
-        show_form($errors);
+        showForm($errors);
     } else {
-        // The submitted data is valid, so process it
-        process_form($input);
+        // 如果送出的資料沒有錯誤，進行處理
+        processForm($input);
     }
 } else {
-    // The form wasn't submitted, so display
-    show_form();
+    // 不是送出表單，進行顯示
+    showForm();
 }
 
+/**
+ * 顯示表單
+ *
+ * @param array $errors 錯誤訊息
+ */
+function showForm(array $errors = array()): void
+{
+    /** @var array $defaults 設定自訂預設值 */
+    $defaults = array(
+        'minPrice' => '5.00',
+        'maxPrice' => '25.00'
+    );
 
-function show_form($errors = array()) {
-    // Set our own defaults
-    $defaults = array('min_price' => '5.00',
-                      'max_price' => '25.00');
-
-    // Set up the $form object with proper defaults
+    // 對 $form 物件設定適當的預設值
     $form = new FormHelper($defaults);
 
-    // All the HTML and form display is in a separate file for clarity
+    // 所有的 HTML 與表單顯示功能都清楚放在不同檔案中
     include 'retrieve-form.php';
 }
 
-function validate_form() {
+/**
+ * 驗證表單
+ *
+ * @return array 錯誤訊息，輸入資料
+ */
+function validateForm(): array
+{
+    /** @var array $input 輸入資料 */
     $input = array();
-    $errors = array( );
+    /** @var array $errors 錯誤訊息 */
+    $errors = array();
 
-    // Remove any leading/trailing whitespace from submitted dish name
-    $input['dish_name'] = trim($_POST['dish_name'] ?? '');
+    // 將送出的 dishName 移除前後的空白字元
+    $input['dishName'] = trim($_POST['dishName'] ?? '');
+    // 最低價格必須是浮點數
+    $input['minPrice'] = filter_input(INPUT_POST, 'minPrice',
+        FILTER_VALIDATE_FLOAT);
 
-    // minimum price must be a valid floating point number
-    $input['min_price'] = filter_input(INPUT_POST,'min_price', FILTER_VALIDATE_FLOAT);
-    if ($input['min_price'] === null || $input['min_price'] === false) {
-        $errors[] = 'Please enter a valid minimum price.';
+    if ($input['minPrice'] === null || $input['minPrice'] === false) {
+        $errors[] = '請輸入有效的最低價格。';
+    }
+    // 最高價必須是浮點數
+    $input['maxPrice'] = filter_input(INPUT_POST, 'maxPrice',
+        FILTER_VALIDATE_FLOAT);
+
+    if ($input['maxPrice'] === null || $input['maxPrice'] === false) {
+        $errors[] = '請輸入有效的最高價格。';
     }
 
-    // maximum price must be a valid floating point number
-    $input['max_price'] = filter_input(INPUT_POST,'max_price', FILTER_VALIDATE_FLOAT);
-    if ($input['max_price'] === null || $input['max_price'] === false) {
-        $errors[] = 'Please enter a valid maximum price.';
+    // 最低價格一定要低於最高價格
+    if ($input['minPrice'] >= $input['maxPrice']) {
+        $errors[] = '最低價格必須低於最高價格。';
+    }
+    $input['isSpicy'] = $_POST['isSpicy'] ?? '';
+
+    if (!array_key_exists($input['isSpicy'], $GLOBALS['spicyChoices'])) {
+        $errors[] = '請選擇一個有效的"辣"選項。';
     }
 
-    // minimum price must be less than the maximum price
-    if ($input['min_price'] >= $input['max_price']) {
-        $errors[] = 'The minimum price must be less than the maximum price.';
-    }
-
-    $input['is_spicy'] = $_POST['is_spicy'] ?? '';
-    if (! array_key_exists($input['is_spicy'], $GLOBALS['spicy_choices'])) {
-        $errors[] = 'Please choose a valid "spicy" option.';
-    }
     return array($errors, $input);
 }
 
-function process_form($input) {
-    // Access the global variable $db inside this function
-    global $db;
+/**
+ * 處理表單
+ *
+ * @param array $input 輸入資料
+ */
+function processForm(array $input): void
+{
+    // 在函式中存取全域變數 $database
+    global $database;
 
-    // build up the query
-    $sql = 'SELECT dish_name, price, is_spicy FROM dishes WHERE
-            price >= ? AND price <= ?';
+    /** @var string $sql 建立 query 述句 */
+    $sql = 'SELECT dish_name, price, is_spicy 
+            FROM dishes 
+            WHERE price >= ? 
+            AND price <= ?';
 
-    // if a dish name was submitted, add to the WHERE clause
-    // we use quote( ) and strtr( ) to prevent user-entered wildcards from working
-    if (strlen($input['dish_name'])) {
-        $dish = $db->quote($input['dish_name']);
+    /**
+     * 如果菜名是被送出的，那就加到 WHERE 子句。
+     * 我們用 quote() 和 strstr() 避免使用者輸入萬用字元。
+     */
+    if (strlen($input['dishName'])) {
+        /** @var string $dish 菜名 */
+        $dish = $database->quote($input['dishName']);
         $dish = strtr($dish, array('_' => '\_', '%' => '\%'));
-        $sql .= " AND dish_name LIKE $dish";
+        $sql .= " AND dishName LIKE $dish";
     }
+    /**
+     * 如果 isSpicy 的值是 "是" 或 "不" 那就加到 SQL 述句中
+     * （如果它的值是 兩種，那我們就不把 isSpicy 加到 WHERE 子句）
+     *
+     * @var string $spicyChoice
+     */
+    $spicyChoice = $GLOBALS['spicyChoices'][$input['isSpicy']];
 
-    // if is_spicy is "yes" or "no", add appropriate SQL
-    // (if it's "either", we don't need to add is_spicy to the WHERE clause)
-    $spicy_choice = $GLOBALS['spicy_choices'][ $input['is_spicy'] ];
-    if ($spicy_choice == 'yes') {
+    if ($spicyChoice == '是') {
         $sql .= ' AND is_spicy = 1';
-    } elseif ($spicy_choice == 'no') {
+    } elseif ($spicyChoice == '不') {
         $sql .= ' AND is_spicy = 0';
     }
-
-    // Send the query to the database program and get all the rows back
-    $stmt = $db->prepare($sql);
-    $stmt->execute(array($input['min_price'], $input['max_price']));
-    $dishes = $stmt->fetchAll();
+    /** @var PDOStatement $statement 把 query 傳送到資料庫程式 */
+    $statement = $database->prepare($sql);
+    $statement->execute(array($input['min_price'], $input['max_price']));
+    /** @var array $dishes 取回所有資料列 */
+    $dishes = $statement->fetchAll();
 
     if (count($dishes) == 0) {
-        print 'No dishes matched.';
+        print '沒有匹配的菜。';
     } else {
         print '<table>';
-        print '<tr><th>Dish Name</th><th>Price</th><th>Spicy?</th></tr>';
+        print '<tr><th>菜名</th><th>價格</th><th>辣?</th></tr>';
+
+        /**
+         * @var object $dish 菜資料
+         */
         foreach ($dishes as $dish) {
             if ($dish->is_spicy == 1) {
-                $spicy = 'Yes';
+                $spicy = '是';
             } else {
-                $spicy = 'No';
+                $spicy = '不';
             }
             printf('<tr><td>%s</td><td>$%.02f</td><td>%s</td></tr>',
-                   htmlentities($dish->dish_name), $dish->price, $spicy);
+                htmlentities($dish->dish_name), $dish->price, $spicy);
         }
     }
 }
-?>

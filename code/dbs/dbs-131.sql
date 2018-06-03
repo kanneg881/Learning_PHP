@@ -1,1 +1,6 @@
-SELECT dish_name, price FROM dishes ORDER BY dish_name LIMIT 10
+SELECT
+  dish_name,
+  price
+FROM dishes
+ORDER BY dish_name
+LIMIT 10;
