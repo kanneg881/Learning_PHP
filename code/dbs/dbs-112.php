@@ -1,4 +1,4 @@
 <?php
-// Decrease the price of some some dishes
-$count = $db->exec("UPDATE dishes SET price = price + 5 WHERE price > 3");
-print 'Changed the price of ' . $count . ' rows.';
+/** @var int $count 改變菜的價格 */
+$count = $database->exec("UPDATE dishes SET price = price + 5 WHERE price > 3");
+print '更改了 ' . $count . ' 列價格。';

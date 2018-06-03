@@ -1,5 +1,7 @@
-; Delete rows in which price is greater than 10.00
-DELETE FROM dishes WHERE price > 10.00
+# 刪除價格比10高的菜
+DELETE FROM dishes
+WHERE price > 10.00;
 
-; Delete rows in which dish_name is exactly "Walnut Bun"
-DELETE FROM dishes WHERE dish_name = 'Walnut Bun'
+# 刪除菜名叫 "核桃小圓麵包" 的紀錄
+DELETE FROM dishes
+WHERE dish_name = '核桃小圓麵包';

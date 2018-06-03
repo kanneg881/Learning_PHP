@@ -1,8 +1,9 @@
-<?php 
-
+<?php
 try {
-    $_ = new PDO('sqlite:/tmp/restaurant.db');
-    $_->exec("DROP TABLE dishes");
-} catch (Exception $e) {}
+    /** @var PDO $pdo 資料庫物件 */
+    $pdo = new PDO('sqlite:/tmp/restaurant.db');
+    $pdo->exec("DROP TABLE dishes");
+} catch (Exception $exception) {
+}
 
-unset($_);
+unset($pdo);

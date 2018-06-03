@@ -1,4 +1,3 @@
-<?php 
-
+<?php
 require 'preamble.prepend.php';
-$_POST['dish_search'] = 'x';
+$_POST['dishSearch'] = 'x';

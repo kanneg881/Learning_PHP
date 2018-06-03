@@ -1,4 +1,4 @@
-<?php 
-
+<?php
 require 'preamble.prepend.php';
-$_POST['dish_name'] = 'x';
+
+$_POST['dishName'] = 'x';

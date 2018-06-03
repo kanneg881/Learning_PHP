@@ -1,7 +1,9 @@
-; Change the spicy status of Eggplant with Chili Sauce
-UPDATE dishes SET is_spicy = 1
-              WHERE dish_name = 'Eggplant with Chili Sauce'
+# 將菜名 Eggplant with Chili Sauce 改為辣的
+UPDATE dishes
+SET is_spicy = 1
+WHERE dish_name = '茄子配辣椒醬';
 
-; Decrease the price of General Tso's Chicken
-UPDATE dishes SET price = price - 1
-              WHERE dish_name = 'General Tso\'s Chicken'
+# General Tso's Chicken 降價啦
+UPDATE dishes
+SET price = price - 1
+WHERE dish_name = 'Tso\'s 雞肉';

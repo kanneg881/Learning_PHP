@@ -1,10 +1,10 @@
 <?php
-
 try {
-    $db = new PDO('sqlite:/tmp/restaurant.db');
-} catch (PDOException $e) {
-    print "Can't connect: " . $e->getMessage();
+    /** @var PDO $database 餐廳資料庫 */
+    $database = new PDO('sqlite:/tmp/restaurant.db');
+} catch (PDOException $exception) {
+    print "無法連線：" . $exception->getMessage();
     exit();
 }
-// Set up exceptions on DB errors
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// 在資料庫錯誤上設置例外
+$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

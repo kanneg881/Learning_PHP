@@ -1,1 +1,3 @@
-SELECT dish_name FROM dishes ORDER BY price
+SELECT dish_name
+FROM dishes
+ORDER BY price;

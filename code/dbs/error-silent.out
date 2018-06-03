@@ -1,2 +1,2 @@
-Couldn't insert!
-SQL Error=HY000, DB Error=1, Message=table dishes has no column named dish_size
+無法插入！
+SQL 錯誤=HY000，資料庫錯誤=1，訊息=table dishes has no column named dish_size

@@ -1,1 +1,4 @@
-SELECT * FROM dishes ORDER BY price LIMIT 1
+SELECT *
+FROM dishes
+ORDER BY price
+LIMIT 1;
