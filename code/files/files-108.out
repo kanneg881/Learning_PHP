@@ -1,0 +1,4 @@
+Warning: fopen(/usr/local/dishes.txt): failed to open stream: Permission denied in {{!}} on line 11
+
+Notice: Undefined variable: php_errormsg in {{!}} on line 14
+打開dishes.txt時錯誤：which php

@@ -1,7 +1,10 @@
 <?php
-$template_file = 'page-template.html';
-if (is_readable($template_file)) {
-    $template = file_get_contents($template_file);
+/** @var string $templateFile 檔案 */
+$templateFile = 'page-template.html';
+
+if (is_readable($templateFile)) {
+    /** @var bool|string $template 檔案內容 */
+    $template = file_get_contents($templateFile);
 } else {
-    print "Can't read template file.";
+    print "無法讀取樣板檔案。";
 }

@@ -1,5 +1,5 @@
 <?php
-// Tell the web client to expect a CSV file
+// 告訴瀏覽器這是 CSV 檔
 header('Content-Type: text/csv');
-// Tell the web client to view the CSV file in a seprate program
+// 告訴瀏覽器實際的 CSV 內容在另外一個檔案中
 header('Content-Disposition: attachment; filename="dishes.csv"');

@@ -1,23 +1,27 @@
 <?php
 try {
-    $db = new PDO('sqlite:/tmp/restaurant.db');
-} catch (Exception $e) {
-    print "Couldn't connect to database: " . $e->getMessage();
+    /** @var PDO $database PDO 資料庫 */
+    $database = new PDO('sqlite:/tmp/restaurant.db');
+} catch (Exception $exception) {
+    print "無法連接到資料庫：" . $exception->getMessage();
     exit();
 }
 
-// Open dishes.txt for writing
-$fh = fopen('/usr/local/dishes.txt','wb');
-if (! $fh) {
-    print "Error opening dishes.txt: $php_errormsg";
+/** @var bool|resource $file 打開 dishes.txt 準備寫出 */
+$file = fopen('/usr/local/dishes.txt', 'wb');
+
+if (!$file) {
+    print "打開dishes.txt時錯誤：$php_errormsg";
 } else {
-    $q = $db->query("SELECT dish_name, price FROM dishes");
-    while($row = $q->fetch( )) {
-        // Write each line (with a newline on the end) to
-        // dishes.txt
-        fwrite($fh, "The price of $row[0] is $row[1] \n");
+    /** @var bool|PDOStatement $query PDO 聲明 */
+    $query = $database->query("SELECT dish_name, price FROM dishes");
+
+    while ($row = $query->fetch()) {
+        // 將資料一行行（每行結尾都換行）寫出到 dishes.txt
+        fwrite($file, "$row[0] 的價格是 $row[1]\n");
     }
-    if (! fclose($fh)) {
-        print "Error closing dishes.txt: $php_errormsg";
+
+    if (!fclose($file)) {
+        print "關閉dishes.txt時錯誤：$php_errormsg";
     }
 }
