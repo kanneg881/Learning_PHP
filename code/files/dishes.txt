@@ -1,4 +1,4 @@
-The price of Walnut Bun is 1 
-The price of Cashew Nuts and White Mushrooms is 4.95 
-The price of Dried Mulberries is 3 
-The price of Eggplant with Chili Sauce is 6.5 
+The price of 核桃小圓麵包 is 1 
+The price of 腰果和白蘑菇 is 4.95 
+The price of 桑椹乾 is 3 
+The price of 茄子配辣椒醬 is 6.5 

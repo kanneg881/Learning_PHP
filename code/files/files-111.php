@@ -1,24 +1,22 @@
 <?php
-// Load the file from Example 10.2
+/** @var bool|string $page 讀取範例 9-1 的檔案 */
 $page = file_get_contents('page-template.html');
 
-// Insert the title of the page
-$page = str_replace('{page_title}', 'Welcome', $page);
+// 加入頁面名稱
+$page = str_replace('{page_title}', '歡迎', $page);
 
-// Make the page blue in the afternoon and
-// green in the morning
+// 上午的話，頁面是綠色
 if (date('H' >= 12)) {
     $page = str_replace('{color}', 'blue', $page);
 } else {
     $page = str_replace('{color}', 'green', $page);
 }
-
-// Take the username from a previously saved session
-// variable
+// 從之前儲存的 session 變數中取得使用者名稱
 $page = str_replace('{name}', $_SESSION['username'], $page);
-
+/** @var bool|int $result 寫入結果 */
 $result = file_put_contents('page.html', $page);
-// Need to check if file_put_contents( ) returns false or -1
+
+// 檢查 file_put_contents() 的回傳值是 false 還是 -1
 if (($result === false) || ($result == -1)) {
-    print "Couldn't save HTML to page.html";
+    print "無法將HTML保存到page.html";
 }

@@ -1,9 +1,12 @@
 <?php
-$log_file = '/var/log/users.log';
-if (is_writeable($log_file)) {
-    $fh = fopen($log_file,'ab');
-    fwrite($fh, $_SESSION['username'] . ' at ' . strftime('%c') . "\n");
-    fclose($fh);
+/** @var string $logFile 記錄檔 */
+$logFile = '/var/log/users.log';
+
+if (is_writeable($logFile)) {
+    /** @var bool|resource $file 檔案 */
+    $file = fopen($logFile, 'ab');
+    fwrite($file, $_SESSION['username'] . ' 在 ' . strftime('%c') . "\n");
+    fclose($file);
 } else {
-    print "Cant write to log file.";
+    print "無法寫入日誌檔案。";
 }

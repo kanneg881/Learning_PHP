@@ -1,8 +1,10 @@
 <?php
+/** @var bool|string $page 檔案內容 */
 $page = file_get_contents('page-template.html');
-// Note the three equals signs in the test expression
-if ($page === false) {
-   print "Couldn't load template: $php_errormsg";
+
+// 注意在判斷式中是3個等於符號
+if ($page !== false) {
+    // ... 進行正常處理
 } else {
-   // ... process template here
+    print "無法載入樣板：$php_errormsg";
 }

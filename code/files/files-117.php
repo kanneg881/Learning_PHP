@@ -1,18 +1,18 @@
 <?php
 try {
-    $db = new PDO('sqlite:/tmp/restaurant.db');
-} catch (Exception $e) {
-    print "Couldn't connect to database: " . $e->getMessage();
+    /** @var PDO $database pdo 資料庫 */
+    $database = new PDO('sqlite:/tmp/restaurant.db');
+} catch (Exception $exception) {
+    print "無法連接到資料庫：" . $exception->getMessage();
     exit();
 }
+/** @var bool|resource $file 開啟 dishes.txt 準備寫出 */
+$file = fopen('dishes.txt','wb');
+/** @var bool|PDOStatement $query pdo 查詢 */
+$query = $database->query("SELECT dish_name, price FROM dishes");
 
-// Open dishes.txt for writing
-$fh = fopen('dishes.txt','wb');
-
-$q = $db->query("SELECT dish_name, price FROM dishes");
-while($row = $q->fetch()) {
-    // Write each line (with a newline on the end) to
-    // dishes.txt
-    fwrite($fh, "The price of $row[0] is $row[1] \n");
+while($row = $query->fetch()) {
+    // 將資料一行行(每行結尾都換行)寫出到dishes
+    fwrite($file, "The price of $row[0] is $row[1] \n");
 }
-fclose($fh);
+fclose($file);
