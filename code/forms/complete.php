@@ -13,21 +13,21 @@ require 'FormHelper.php';
  *
  * @var array $sweets
  */
-$sweets = array(
+$sweets = [
     '鬆餅' => '芝麻鬆餅',
     '方形' => '方形椰奶凝膠',
     '蛋糕' => '黑糖蛋糕',
     '米肉' => '甜米飯和肉'
-);
+];
 /** @var array $mainDishes 主菜 */
-$mainDishes = array(
+$mainDishes = [
     '黃瓜' => '紅燒海參',
     '胃' => "炒豬的胃",
     '肚' => '葡萄酒醬炒牛肚',
     '芋頭' => '芋頭燉豬肉',
     '內臟' => '鹽焗內臟',
     '鮑魚' => '鮑魚骨髓和鴨掌'
-);
+];
 
 /**
  * 主要頁面的程式邏輯是：
@@ -35,7 +35,7 @@ $mainDishes = array(
  * - 如果表單不是送出的，那就顯示
  */
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // 如果 validateForm() 回傳錯誤，把錯誤傳給 show_form()
+    // 如果 validateForm() 回傳錯誤，把錯誤傳給 showForm()
     list($errors, $input) = validateForm();
 
     if ($errors) {
@@ -54,13 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
  *
  * @param array $errors 錯誤訊息
  */
-function showForm(array $errors = array()): void
+function showForm(array $errors = []): void
 {
     /** @var array $defaults 預設值 */
-    $defaults = array(
+    $defaults = [
         'delivery' => '是',
         'size' => '中'
-    );
+    ];
     /** @var FormHelper $form 表單 */
     $form = new FormHelper($defaults);
 
@@ -76,9 +76,9 @@ function showForm(array $errors = array()): void
 function validateForm(): array
 {
     /** @var array $input 輸入資料 */
-    $input = array();
+    $input = [];
     /** @var array $errors 錯誤訊息 */
-    $errors = array();
+    $errors = [];
 
     // name 是必要欄位
     $input['name'] = trim($_POST['name'] ?? '');
@@ -99,7 +99,7 @@ function validateForm(): array
         $errors[] = '請選擇一個有效的甜品。';
     }
     // 主菜要有2個
-    $input['mainDish'] = $_POST['mainDish'] ?? array();
+    $input['mainDish'] = $_POST['mainDish'] ?? [];
 
     if (count($input['mainDish']) != 2) {
         $errors[] = '請選擇兩道主菜。';
@@ -118,7 +118,7 @@ function validateForm(): array
         $errors[] = '請輸入您的地址以便交付。';
     }
 
-    return array($errors, $input);
+    return [$errors, $input];
 }
 
 /**
