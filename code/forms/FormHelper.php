@@ -3,14 +3,14 @@
 class FormHelper
 {
     /** @var array 值 */
-    protected $values = array();
+    protected $values = [];
 
     /**
      * FormHelper 建構子。
      *
      * @param array $values 值
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->values = $_POST;
@@ -29,7 +29,7 @@ class FormHelper
      */
     public function input(
         string $type,
-        array $attributes = array(),
+        array $attributes = [],
         bool $isMultiple = false
     ): string {
         $attributes['type'] = $type;
@@ -53,23 +53,14 @@ class FormHelper
      */
     protected function isOptionSelected(string $name, string $value): bool
     {
-        /**
-         * 如果 $name 不在 values 陣列中
-         * 選項就不會選取
-         */
+        // 如果 $name 不在 values 陣列中，選項就不會選取
         if (!isset($this->values[$name])) {
             return false;
         } elseif (is_array($this->values[$name])) {
-            /**
-             * 如果 $name 元素是個陣列
-             * 那檢查一下 $value 有沒有在這個陣列中
-             */
+            // 如果 $name 元素是個陣列，那檢查一下 $value 有沒有在這個陣列中
             return in_array($value, $this->values[$name]);
         } else {
-            /**
-             * 否則的話，將 $value 與 $name 元素作比較
-             * 回傳是否存在
-             */
+            // 否則的話，將 $value 與 $name 元素作比較，回傳是否存在
             return $value == $this->values[$name];
         }
     }
@@ -84,7 +75,7 @@ class FormHelper
      */
     public function tag(
         string $tag,
-        array $attributes = array(),
+        array $attributes = [],
         bool $isMultiple = false
     ): string {
         return "<$tag {$this->attributes($attributes, $isMultiple)} />";
@@ -126,10 +117,7 @@ class FormHelper
                 // 否則的話是鍵 = 值型態
                 $value = $this->encode($attribute);
 
-                /**
-                 * 如果元件有多個值
-                 * 把[]加到它的值後面
-                 */
+                // 如果元件有多個值，把[]加到它的值後面
                 if ($isMultiple && ($key == 'name')) {
                     $value .= '[]';
                 }
@@ -158,7 +146,7 @@ class FormHelper
      * @param array $attributes 屬性
      * @return string 選擇元素
      */
-    public function select(array $options, array $attributes = array()): string
+    public function select(array $options, array $attributes = []): string
     {
         /** @var bool $multiple 多選 */
         $multiple = $attributes['multiple'] ?? false;
@@ -179,7 +167,7 @@ class FormHelper
      */
     public function start(
         string $tag,
-        array $attributes = array(),
+        array $attributes = [],
         bool $isMultiple = false
     ): string {
         /** @var bool $valueAttribute <select> 與 <textarea> 標籤沒有 value 屬性 */
@@ -233,7 +221,7 @@ class FormHelper
      * @param array $attributes 屬性
      * @return string 文字區域元素
      */
-    public function textarea($attributes = array())
+    public function textarea(array $attributes = []): string
     {
         /** @var string|null $name 名稱 */
         $name = $attributes['name'] ?? null;
