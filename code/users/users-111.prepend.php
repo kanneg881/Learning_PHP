@@ -1,3 +1,2 @@
-<?php 
-
-$_COOKIE['userid'] = 'Pip pip';
+<?php
+$_COOKIE['userID'] = 'Pip pip';

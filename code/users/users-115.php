@@ -1,2 +1,2 @@
 <?php
-setcookie('short-userid','ralph',0,'/~alice/');
+setcookie('shortUserID', 'ralph', 0, '/~alice/');

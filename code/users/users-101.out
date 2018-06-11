@@ -1,8 +1,8 @@
 <form method="POST" action="{{!}}">
-  
-  Dish: <select name="dish"><option  value="cuke">Braised Sea Cucumber</option><option  value="stomach">Sauteed Pig's Stomach</option><option  value="tripe">Sauteed Tripe with Wine Sauce</option><option  value="taro">Stewed Pork with Taro</option><option  value="giblets">Baked Giblets with Salt</option><option  value="abalone">Abalone with Marrow and Duck Feet</option></select> <br/>
 
-  Quantity: <input name="quantity" type="text" /> <br/>
-
-  <input value="Order" type="submit" />
+菜：<select name="dish"><option value='黃瓜'>紅燒海參</option><option value='胃'>炒豬胃</option><option value='肚'>葡萄酒醬炒牛肚</option><option value='芋頭'>芋頭燉豬肉</option><option value='內臟'>烤鹽內臟</option><option value='鮑魚'>鮑魚與骨髓和鴨腳</option></select>
+<br/>
+數量：<input name="quantity" type="text" />
+<br/>
+<input value="訂購" type="submit" />
 </form>

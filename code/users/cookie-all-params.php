@@ -1,4 +1,10 @@
 <?php
-// null for domain and path tell PHP not to put any
-// domain or path in the cookie
-setcookie('short-userid','ralph',0,null, null, true, true);
+// 路徑與網域參數為 null 時，表示不把路徑或網域資訊放進 cookie
+setcookie(
+    'shortUserID',
+    'ralph',
+    0,
+    null,
+    null,
+    true,
+    true);
