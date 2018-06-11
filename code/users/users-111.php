@@ -1,2 +1,2 @@
 <?php
-print 'Hello, ' . $_COOKIE['userid'];
+print '你好，' . $_COOKIE['userID'];

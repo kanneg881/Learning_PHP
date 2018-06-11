@@ -1,21 +1,25 @@
 <?php
-session_start( );
+session_start();
 
-$main_dishes = array('cuke' => 'Braised Sea Cucumber',
-                     'stomach' => "Sauteed Pig's Stomach",
-                     'tripe' => 'Sauteed Tripe with Wine Sauce',
-                     'taro' => 'Stewed Pork with Taro',
-                     'giblets' => 'Baked Giblets with Salt', 
-                     'abalone' => 'Abalone with Marrow and Duck Feet');
+/** @var array $mainDishes 主要菜 */
+$mainDishes = [
+    '黃瓜' => '紅燒海參',
+    '胃' => "炒豬胃",
+    '肚' => '葡萄酒醬炒牛肚',
+    '芋頭' => '芋頭燉豬肉',
+    '內臟' => '烤鹽內臟',
+    '鮑魚' => '鮑魚與骨髓和鴨腳',
+];
 
-if (isset($_SESSION['order']) && (count($_SESSION['order']) > 0)) {
+if (isset($_SESSION['order']) && count($_SESSION['order']) > 0) {
     print '<ul>';
+
     foreach ($_SESSION['order'] as $order) {
-        $dish_name = $main_dishes[ $order['dish'] ];
-        print "<li> $order[quantity] of $dish_name </li>";
-    } 
+        /** @var string $dishName 菜名 */
+        $dishName = $mainDishes[$order['dish']];
+        print "<li> $order[quantity] 道 $dishName </li>";
+    }
     print "</ul>";
 } else {
-    print "You haven't ordered anything.";
+    print "你還沒有訂購任何東西。";
 }
-?>

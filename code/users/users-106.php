@@ -1,9 +1,8 @@
 <?php
-session_start( );
+session_start();
 
 if (array_key_exists('username', $_SESSION)) {
-    print "Hello, $_SESSION[username].";
+    print "你好，$_SESSION[username]。";
 } else {
-    print 'Howdy, stranger.';
+    print '你好，陌生人。';
 }
-?>

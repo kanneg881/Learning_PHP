@@ -1,24 +1,35 @@
 <?php
-function validate_form( ) {
-    global $db;
-    $input = array();
-    $errors = array();
-
-    // This gets set to true only if the submitted password matches
-    $password_ok = false;
+/**
+ * 驗證表單
+ *
+ * @return array 錯誤訊息，資料輸入
+ */
+function validateForm()
+{
+    global $database;
+    /** @var array $input 輸入資料 */
+    $input = [];
+    /** @var array $errors 錯誤訊息 */
+    $errors = [];
+    /** @var bool $passwordOK 只有密碼正確時才會被設定為 true */
+    $passwordOK = false;
 
     $input['username'] = $_POST['username'] ?? '';
-    $submitted_password = $_POST['password'] ?? '';
+    /** @var string $submittedPassword 送出的密碼 */
+    $submittedPassword = $_POST['password'] ?? '';
+    /** @var PDOStatement $statement PDO 聲明 */
+    $statement = $database->prepare('SELECT password FROM users WHERE username = ?');
+    $statement->execute($input['username']);
+    /** @var mixed $row 資料庫一筆查詢結果 */
+    $row = $statement->fetch();
 
-    $stmt = $db->prepare('SELECT password FROM users WHERE username = ?');
-    $stmt->execute($input['username']);
-    $row = $stmt->fetch();
-    // If there's no row, then the username didn't match any rows
+    // 如果回傳 false，表示該帳號記錄在資料庫中不存在
     if ($row) {
-        $password_ok = password_verify($submitted_password, $row[0]);
+        $passwordOK = password_verify($submittedPassword, $row[0]);
     }
-    if (! $password_ok) {
-        $errors[] = 'Please enter a valid username and password.';
+
+    if (!$passwordOK) {
+        $errors[] = '請輸入有效的帳號和密碼。';
     }
 
     return array($errors, $input);

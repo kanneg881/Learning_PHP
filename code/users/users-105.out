@@ -1,6 +1,8 @@
 <form method="POST" action="{{!}}">
-  
-  Username: <input name="username" type="text" /> <br/>
-  Password: <input name="password" type="password" /> <br/>
-  <input value="Log In" type="submit" />
+
+使用者名稱：<input name="username" type="text" />
+<br/>
+密碼：<input name="password" type="password" />
+<br/>
+<input value="登入" type="submit" />
 </form>

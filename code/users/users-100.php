@@ -1,2 +1,2 @@
 <?php
-setcookie('userid','ralph');
+setcookie('userID','ralph');
