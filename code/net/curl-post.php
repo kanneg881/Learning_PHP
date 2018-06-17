@@ -1,16 +1,18 @@
-<?php 
-
+<?php
+/** @var string $url 網址 */
 $url = 'http://php7.example.com:7000/post-server.php';
 
-// Two variables to send via POST
-$form_data = array('name' => 'black pepper',
-                   'smell' => 'good');
-
-$c = curl_init($url);
-curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
-// This should be a POST request
-curl_setopt($c, CURLOPT_POST, true);
+/** @var array $formData 用 POST 送出兩個變數 */
+$formData = [
+    'name' => 'black pepper',
+    'smell' => 'good',
+];
+/** @var resource $curl curl 資源 */
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+// 表示這是一個 POST request
+curl_setopt($curl, CURLOPT_POST, true);
 // This is the data to send
-curl_setopt($c, CURLOPT_POSTFIELDS, $form_data);
+curl_setopt($curl, CURLOPT_POSTFIELDS, $formData);
 
-print curl_exec($c);
+print curl_exec($curl);

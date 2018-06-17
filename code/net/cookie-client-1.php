@@ -1,12 +1,13 @@
 <?php 
+/** @var resource $curl 指定要取回 cookie 的 server 頁面，且不傳送 cookies */
+$curl = curl_init('http://localhost:8888/Learning_PHP/code/net/cookie-server.php');
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+/** @var mixed $result 第一次結果，沒有 cookie */
+$result = curl_exec($curl);
 
-// Retrieve the cookie server page, sending no cookies
-$c = curl_init('http://php7.example.com:7000/cookie-server.php');
-curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
-// The first time, there are no cookies
-$res = curl_exec($c);
-print $res;
+print $result;
 
-// The second time, there are still no cookies
-$res = curl_exec($c);
-print $res;
+// 第二次結果，也沒有 cookie
+$result = curl_exec($curl);
+
+print $result;

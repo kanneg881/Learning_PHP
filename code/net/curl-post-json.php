@@ -1,18 +1,20 @@
-<?php 
-
+<?php
+/** @var string $url 網址 */
 $url = 'http://php7.example.com:7000/post-server.php';
 
-// Two variables to send as JSON via POST
-$form_data = array('name' => 'black pepper',
-                   'smell' => 'good');
+/** @var array $formData POST 時用 JSON 格式傳送兩個變數 */
+$formData = [
+    'name' => 'black pepper',
+    'smell' => 'good',
+];
+/** @var resource $curl curl 資源 */
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+// 指定要做 POST request
+curl_setopt($curl, CURLOPT_POST, true);
+// 指定請求內容是 JSON 格式
+curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-Type: application/json',]);
+// 指定要傳送的資料，並加以格式化
+curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($formData));
 
-$c = curl_init($url);
-curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
-// This should be a POST request
-curl_setopt($c, CURLOPT_POST, true);
-// This is a request containing JSON
-curl_setopt($c, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-// This is the data to send, formatted appropriately
-curl_setopt($c, CURLOPT_POSTFIELDS, json_encode($form_data));
-
-print curl_exec($c);
+print curl_exec($curl);

@@ -1,3 +1,2 @@
-<?php 
-
+<?php
 require 'ndb.prepend.php';

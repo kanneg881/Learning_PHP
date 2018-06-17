@@ -1,42 +1,51 @@
-<?php 
+<?php
+/** @var array $formats 能支援的格式種類 */
+$formats = ['application/json', 'text/html', 'text/plain',];
+/** @var string $defaultFormat 預設的格式 */
+$defaultFormat = 'application/json';
 
-// Formats we want to support
-$formats = array('application/json','text/html','text/plain');
-// Response format if not specified
-$default_format = 'application/json';
-
-// Was a response format supplied?
+// 接入命令所指定的格式是什麼呢？
 if (isset($_SERVER['HTTP_ACCEPT'])) {
-    // If a supported format is supplied, use it
-    if (in_array($_SERVER['HTTP_ACCEPT'], $formats)) {
-        $format = $_SERVER['HTTP_ACCEPT'];
+    foreach ($formats as $value) {
+        if (strpos($_SERVER['HTTP_ACCEPT'], $value) !== false) {
+            /** @var string $format 指定格式 */
+            $format = $_SERVER['HTTP_ACCEPT'];
+            break;
+        }
     }
-    // An unsupported format was supplied, so return an error
-    else {
-        // 406 means "You want a response in a format I can't generate"
+
+    if (!isset($format)) {
+        /**
+         * 如果指定了未支援的格式，那麼回傳錯誤
+         * 406 代表"指定的格式無法支援"
+         */
         http_response_code(406);
-        // Exiting now means no response body, which is OK
+        // 這邊離開的話，代表沒有回應本文
         exit();
     }
 } else {
-    $format = $default_format;
+    $format = $defaultFormat;
 }
-
-// Figure out what time it is
-$response_data = array('now' => time());
-// Tell the client what kind of content we're sending
+// 查出現在時間
+$responseData = ['now' => time(),];
+// 告訴客戶我們回應的格式是什麼
 header("Content-Type: $format");
-// Print the time in a format-appropriate way
-if ($format == 'application/json') {
-    print json_encode($response_data);
-}
-else if ($format == 'text/html') { ?>
-<!doctype html>
-  <html>
-    <head><title>Clock</title></head>
-    <body><time><?= date('c', $response_data['now']) ?></time></body>
-  </html>
-<?php 
-} else if ($format == 'text/plain') {
-    print $response_data['now'];
+
+// 將時間轉為對應的格式
+if (strpos($format, 'application/json') !== false) {
+    print json_encode($responseData);
+} elseif (strpos($format, 'text/html') !== false) {
+    ?>
+    <!doctype html>
+    <html>
+    <head>
+        <title>時鐘</title>
+    </head>
+    <body>
+    <time><?= date('c', $responseData['now']) ?></time>
+    </body>
+    </html>
+    <?php
+} elseif (strpos($format, 'text/plain') !== false) {
+    print $responseData['now'];
 }
