@@ -1,6 +1,8 @@
 1	welcome.php
+-	welcome.out
 -	welcome.err
 2	trickier.php
+-	trickier.out
 -	trickier.err
 3	broken.php
 -	broken.out
@@ -19,4 +21,8 @@
 -	exception-handler.out
 -	exception-handler.err
 -	debugging-12.php
+-	debugging-12.out
+-	debugging-12.err
 -	debugging-13.php
+-	debugging-13.out
+-	debugging-13.err

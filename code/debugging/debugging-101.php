@@ -1,11 +1,11 @@
 <?php
-// Capture output instead of printing it
-ob_start( );
-// Call var_dump( ) as usual
+// 開始抓取接下來的 print 內容
+ob_start();
+// 如往常一般呼叫 var_dump()
 var_dump($_POST);
-// Store in $output the output generated since calling ob_start( )
-$output = ob_get_contents( );
-// Go back to regular printing of output
-ob_end_clean( );
-// Send $output to the error log
+/** @var string $output 將抓取的內容存到 $output */
+$output = ob_get_contents();
+// 恢復原來的 print 輸出
+ob_end_clean();
+// 將 $output 送到紀錄檔
 error_log($output);

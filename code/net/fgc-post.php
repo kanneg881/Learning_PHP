@@ -1,17 +1,21 @@
-<?php 
+<?php
+/** @var string $url 網址 */
+$url = 'http://localhost:8888/Learning_PHP/code/net/post-server.php';
 
-$url = 'http://php7.example.com:7000/post-server.php';
+// Two variables to send via
+/** @var array $formData 藉由 POST 送出2兩個變數 */
+$formData = [
+    'name' => 'black pepper',
+    'smell' => 'good',
+];
+/** @var array $options 設定 method、Content-Type 以及 content */
+$options = [
+    'method' => 'POST',
+    'header' => 'Content-Type: application/x-www-form-urlencoded',
+    'content' => http_build_query($formData)
+];
+/** @var resource $context 為 http 串流設定串流內容 */
+$context = stream_context_create(['http' => $options]);
 
-// Two variables to send via POST
-$form_data = array('name' => 'black pepper',
-                   'smell' => 'good');
-
-// Set the method, content type, and content
-$options = array('method' => 'POST',
-                 'header' => 'Content-Type: application/x-www-form-urlencoded',
-                 'content' => http_build_query($form_data));
-// Create a context for an 'http' stream
-$context = stream_context_create(array('http' => $options));
-
-// Pass the context as the third argument to file_get_contents
+// 將 context 作為第三個參數傳入 file_get_contents。
 print file_get_contents($url, false, $context);

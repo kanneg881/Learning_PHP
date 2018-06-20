@@ -1,18 +1,1077 @@
 {
     "list": {
         "q": "black pepper",
-        "sr": "28",
+        "sr": "Legacy",
+        "ds": "any",
         "start": 0,
-        "end": 1,
-        "total": 1,
+        "end": 133,
+        "total": 133,
         "group": "",
         "sort": "r",
         "item": [
             {
                 "offset": 0,
+                "group": "Branded Food Products Database",
+                "name": "STUBB'S, SWEET BLACK PEPPER SAUCE, BLACK PEPPER, UPC: 734756002178",
+                "ndbno": "45113667",
+                "ds": "LI",
+                "manu": "MCCORMICK & COMPANY, INC."
+            },
+            {
+                "offset": 1,
+                "group": "Branded Food Products Database",
+                "name": "TEJAS CHOCOLATE, DARK MATTER BLACK CHOCOLATE, BLACK LAVA SEA SALT, BLACK PEPPER, UPC: 859037004280",
+                "ndbno": "45162070",
+                "ds": "LI",
+                "manu": "Tejas Chocolate LLC"
+            },
+            {
+                "offset": 2,
+                "group": "Branded Food Products Database",
+                "name": "JACK LINK'S, PEPPERED BEEF JERKY SEASONED WITH CRACKED BLACK PEPPER, UPC: 017082876324",
+                "ndbno": "45087756",
+                "ds": "LI",
+                "manu": "LINK SNACKS, INC."
+            },
+            {
+                "offset": 3,
+                "group": "Branded Food Products Database",
+                "name": "PEPPERED SALAMI COATED WITH BLACK PEPPER, UPC: 044500984750",
+                "ndbno": "45287401",
+                "ds": "LI",
+                "manu": "Sara Lee Foods"
+            },
+            {
+                "offset": 4,
+                "group": "Branded Food Products Database",
+                "name": "SIMPLY PEPPERED ROASTED FAVA BEANS WITH HIMALAYAN PINK SALT AND BLACK PEPPER, UPC: 039400185208",
+                "ndbno": "45263989",
+                "ds": "LI",
+                "manu": "Bush Brothers And Company"
+            },
+            {
+                "offset": 5,
+                "group": "Branded Food Products Database",
+                "name": "SIGNATURE, TURKEY BREAST, CRACKED BLACK PEPPER SEASONED, UPC: 042222229432",
+                "ndbno": "45139621",
+                "ds": "LI",
+                "manu": "Jennie-O Turkey Store, Inc."
+            },
+            {
+                "offset": 6,
+                "group": "Branded Food Products Database",
+                "name": "THE DELI COUNTER, TURKEY PASTRAMI WITH CRACKED BLACK PEPPER, HICKORY SMOKED DARK, UPC: 042222860314",
+                "ndbno": "45139594",
+                "ds": "LI",
+                "manu": "Jennie-O Turkey Store, Inc."
+            },
+            {
+                "offset": 7,
+                "group": "Branded Food Products Database",
+                "name": "365 EVERYDAY VALUE, POTATO CHIPS, BLACK PEPPER & SEA SALT, UPC: 099482444174",
+                "ndbno": "45168059",
+                "ds": "LI",
+                "manu": "Whole Foods Market, Inc."
+            },
+            {
+                "offset": 8,
+                "group": "Branded Food Products Database",
+                "name": "WILD HARVEST, ORGANIC SWEET CORN & BLACK PEPPER TORTILLA CHIPS, UPC: 711535510512",
+                "ndbno": "45145319",
+                "ds": "LI",
+                "manu": "Star Markets Co."
+            },
+            {
+                "offset": 9,
+                "group": "Branded Food Products Database",
+                "name": "365 EVERYDAY VALUE, TURKEY BREAST, BLACK PEPPER, UPC: 099482452667",
+                "ndbno": "45168184",
+                "ds": "LI",
+                "manu": "Whole Foods Market, Inc."
+            },
+            {
+                "offset": 10,
+                "group": "Branded Food Products Database",
+                "name": "HIMALAYAN BLACK PEPPER GRINDER, UPC: 818581010895",
+                "ndbno": "45255582",
+                "ds": "LI",
+                "manu": "WBM LLC"
+            },
+            {
+                "offset": 11,
+                "group": "Branded Food Products Database",
+                "name": "PORK CLOUDS, FRIED PORK SKINS, MALABAR BLACK PEPPER, UPC: 755918449655",
+                "ndbno": "45086050",
+                "ds": "LI",
+                "manu": "Twin Dolphin Games Inc."
+            },
+            {
+                "offset": 12,
+                "group": "Branded Food Products Database",
+                "name": "DRAGONFLY, BLACK PEPPER POWDER, UPC: 721557533437",
+                "ndbno": "45243771",
+                "ds": "LI",
+                "manu": "U. S. Trading Company"
+            },
+            {
+                "offset": 13,
+                "group": "Branded Food Products Database",
+                "name": "TIEU HOT DEN, WHOLE BLACK PEPPER, UPC: 721557533413",
+                "ndbno": "45243766",
+                "ds": "LI",
+                "manu": "U. S. Trading Company"
+            },
+            {
+                "offset": 14,
+                "group": "Branded Food Products Database",
+                "name": "LAWRY'S, BLACK PEPPER SEASONED SALT, UPC: 021500047036",
+                "ndbno": "45107995",
+                "ds": "LI",
+                "manu": "MCCORMICK & COMPANY, INC."
+            },
+            {
+                "offset": 15,
+                "group": "Branded Food Products Database",
+                "name": "PARMELA CREAMERY, CHREAMY NUTCHEESE, BLACK PEPPER, UPC: 720825407180",
+                "ndbno": "45024580",
+                "ds": "LI",
+                "manu": "Orange Music, Inc."
+            },
+            {
+                "offset": 16,
+                "group": "Branded Food Products Database",
+                "name": "HILLSHIRE FARM, TURKEY BREAST, BLACK PEPPER, UPC: 044500329551",
+                "ndbno": "45319530",
+                "ds": "LI",
+                "manu": "Sara Lee Foods"
+            },
+            {
+                "offset": 17,
+                "group": "Branded Food Products Database",
+                "name": "CHEESE & BLACK PEPPER RAVIOLI, UPC: 077890410530",
+                "ndbno": "45283810",
+                "ds": "LI",
+                "manu": "Wegmans Food Markets, Inc."
+            },
+            {
+                "offset": 18,
+                "group": "Branded Food Products Database",
+                "name": "V8 BEVERAGE VEGETABLE BLACK PEPPER, UNPREPARED, GTIN: 00051000201195",
+                "ndbno": "45135209",
+                "ds": "GDSN",
+                "manu": "CAMPBELL SOUP COMPANY"
+            },
+            {
+                "offset": 19,
+                "group": "Branded Food Products Database",
+                "name": "FROLLICKS CRNCHY BEAN SEED MIX OLIVE OIL CRACKED BLACK PEPPER, UNPREPARED, GTIN: 00016000489325",
+                "ndbno": "45327939",
+                "ds": "GDSN",
+                "manu": "GENERAL MILLS SALES INC."
+            },
+            {
+                "offset": 20,
+                "group": "Branded Food Products Database",
+                "name": "Quaker Popped Sea Salt & Cracked Black Pepper 3 Ounce Plastic Bag, UNPREPARED, GTIN: 00030000160008",
+                "ndbno": "45367952",
+                "ds": "GDSN",
+                "manu": "QTG"
+            },
+            {
+                "offset": 21,
+                "group": "Branded Food Products Database",
+                "name": "HORMEL, BACON & PORK SAUSAGE, MAPLE BLACK PEPPER, UPC: 037600437257",
+                "ndbno": "45206679",
+                "ds": "LI",
+                "manu": "HORMEL FOODS CORPORATION"
+            },
+            {
+                "offset": 22,
+                "group": "Branded Food Products Database",
+                "name": "GRADE \"\"A\"\" PREMIUM WHOLE BLACK PEPPER, UPC: 015418007008",
+                "ndbno": "45264720",
+                "ds": "LI",
+                "manu": "Rouse's Enterprises, Inc."
+            },
+            {
+                "offset": 23,
+                "group": "Branded Food Products Database",
+                "name": "MAPLE BLACK PEPPER THICK CUT BACON, UPC: 037600313971",
+                "ndbno": "45206829",
+                "ds": "LI",
+                "manu": "HORMEL FOODS CORPORATION"
+            },
+            {
+                "offset": 24,
+                "group": "Branded Food Products Database",
+                "name": "WHOLE FOODS MARKET, CHINESE BLACK PEPPER SAUCE, UPC: 034683349897",
+                "ndbno": "45205262",
+                "ds": "LI",
+                "manu": "Finesse Records"
+            },
+            {
+                "offset": 25,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER KETCHUP, UPC: 736924502770",
+                "ndbno": "45286722",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 26,
+                "group": "Branded Food Products Database",
+                "name": "AMANO, ARTISAN DARK CHOCOLATE, CARDAMOM BLACK PEPPER, UPC: 892990001132",
+                "ndbno": "45159677",
+                "ds": "LI",
+                "manu": "Amano Chocolate"
+            },
+            {
+                "offset": 27,
+                "group": "Branded Food Products Database",
+                "name": "EQUAL EXCHANGE CHOCOLATES, ORGANIC DARK CHOCOLATE, LEMON GINGER WITH BLACK PEPPER, UPC: 745998990239",
+                "ndbno": "45145648",
+                "ds": "LI",
+                "manu": "Equal Exchange, Inc."
+            },
+            {
+                "offset": 28,
+                "group": "Branded Food Products Database",
+                "name": "CLASSICO BLACK PEPPER COATED ITALIAN DRY SALAMI, UPC: 038101009653",
+                "ndbno": "45104481",
+                "ds": "LI",
+                "manu": "BUSSETO FOODS, INC."
+            },
+            {
+                "offset": 29,
+                "group": "Branded Food Products Database",
+                "name": "SOUTHERN RECIPE, PORK RINDS, SEA SALT & CRACKED BLACK PEPPER, UPC: 077079004000",
+                "ndbno": "45148518",
+                "ds": "LI",
+                "manu": "Rudolph Foods Company, Inc."
+            },
+            {
+                "offset": 30,
+                "group": "Branded Food Products Database",
+                "name": "FULLER FOODS, SERIOUS CHEESY PUFFS, BAKED CORN PUFFS, ASIAGO BLACK PEPPER, UPC: 860242000134",
+                "ndbno": "45162099",
+                "ds": "LI",
+                "manu": "Fuller Foods, Inc."
+            },
+            {
+                "offset": 31,
+                "group": "Branded Food Products Database",
+                "name": "DAVID SEEDS Black Pepper, UNPREPARED, GTIN: 00026200238913",
+                "ndbno": "45130292",
+                "ds": "GDSN",
+                "manu": "Conagra Brands"
+            },
+            {
+                "offset": 32,
+                "group": "Branded Food Products Database",
+                "name": "DAVID SEEDS Lightly Salted with Black Pepper, UNPREPARED, GTIN: 00026200423814",
+                "ndbno": "45130515",
+                "ds": "GDSN",
+                "manu": "Conagra Brands"
+            },
+            {
+                "offset": 33,
+                "group": "Branded Food Products Database",
+                "name": "NATURE'S RANCHER, COOKING & GRILLING SAUCE, BLACK PEPPER, UPC: 634098425942",
+                "ndbno": "45168584",
+                "ds": "LI",
+                "manu": "Marinade Bay, Inc."
+            },
+            {
+                "offset": 34,
+                "group": "Branded Food Products Database",
+                "name": "LEE KUM KEE, SAUCE FOR BLACK PEPPER CHICKEN, UPC: 078895122046",
+                "ndbno": "45088318",
+                "ds": "LI",
+                "manu": "LEE KUM KEE CO. LTD."
+            },
+            {
+                "offset": 35,
+                "group": "Branded Food Products Database",
+                "name": "SMOKED BLACK PEPPER NATURAL WHITE CHEDDAR CHEESE, DELI SLICED, UPC: 072830033077",
+                "ndbno": "45240657",
+                "ds": "LI",
+                "manu": "TILLAMOOK COUNTY CREAMERY ASSOCIATION"
+            },
+            {
+                "offset": 36,
+                "group": "Branded Food Products Database",
+                "name": "NATURAL COOKED UNCURED, CRACKED BLACK PEPPER BEEF POLISH SAUSAGE, UPC: 851547006044",
+                "ndbno": "45087037",
+                "ds": "LI",
+                "manu": "El Raigon Natural Beef"
+            },
+            {
+                "offset": 37,
+                "group": "Branded Food Products Database",
+                "name": "OREGANO-GARLIC-BLACK PEPPER SPICE MIX, UPC: 728028186727",
+                "ndbno": "45212271",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 38,
+                "group": "Branded Food Products Database",
+                "name": "MATURE CHEDDAR SLICES WITH CRACKED BLACK PEPPER, UPC: 093936066356",
+                "ndbno": "45344805",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 39,
+                "group": "Branded Food Products Database",
+                "name": "THREE CHEESE RISOTTO WITH NUTMEG & BLACK PEPPER, UPC: 078742159768",
+                "ndbno": "45324307",
+                "ds": "LI",
+                "manu": "WAL-MART STORES, INC."
+            },
+            {
+                "offset": 40,
+                "group": "Branded Food Products Database",
+                "name": "PARMESAN & BLACK PEPPER RAVIOLI CHEESE, UPC: 024842440053",
+                "ndbno": "45314130",
+                "ds": "LI",
+                "manu": "Nestle USA-Prepared Foods Division, Inc."
+            },
+            {
+                "offset": 41,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER & OLIVE OIL, UPC: 793573720948",
+                "ndbno": "45285725",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 42,
+                "group": "Branded Food Products Database",
+                "name": "DRY SALAMI ROLLED IN BLACK PEPPER, UPC: 038101000469",
+                "ndbno": "45036168",
+                "ds": "LI",
+                "manu": "BUSSETO FOODS, INC."
+            },
+            {
+                "offset": 43,
+                "group": "Branded Food Products Database",
+                "name": "ORIGINAL BLACK PEPPER BRAIDS, UPC: 086492739987",
+                "ndbno": "45211722",
+                "ds": "LI",
+                "manu": "Clemente Bakery"
+            },
+            {
+                "offset": 44,
+                "group": "Branded Food Products Database",
+                "name": "PORTOBELLO MUSHROOM & CRACKED BLACK PEPPER, UPC: 736490004630",
+                "ndbno": "45348470",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 45,
+                "group": "Branded Food Products Database",
+                "name": "GROUND BLACK PEPPER, UPC: 055270955970",
+                "ndbno": "45210714",
+                "ds": "LI",
+                "manu": "Grace Kennedy Co. Ltd"
+            },
+            {
+                "offset": 46,
+                "group": "Branded Food Products Database",
+                "name": "WHOLE BLACK PEPPER, UPC: 026662112370",
+                "ndbno": "45363871",
+                "ds": "LI",
+                "manu": "Casa Imports Inc."
+            },
+            {
+                "offset": 47,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER MULTI GRAIN & SEED CRACKERS, UPC: 852406003853",
+                "ndbno": "45340510",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 48,
+                "group": "Branded Food Products Database",
+                "name": "GREAT VALUE, IODIZED SALT & BLACK PEPPER, UPC: 078742017020",
+                "ndbno": "45005815",
+                "ds": "LI",
+                "manu": "WAL-MART STORES, INC."
+            },
+            {
+                "offset": 49,
+                "group": "Branded Food Products Database",
+                "name": "CRACKED BLACK PEPPER SALAMI, UPC: 044700074480",
+                "ndbno": "45260848",
+                "ds": "LI",
+                "manu": "KRAFT HEINZ FOODS COMPANY"
+            },
+            {
+                "offset": 50,
+                "group": "Branded Food Products Database",
+                "name": "CENTER CUT COATED WITH COARSE BLACK PEPPER BACON, UPC: 071755026805",
+                "ndbno": "45051938",
+                "ds": "LI",
+                "manu": "Kunzler & Company Inc"
+            },
+            {
+                "offset": 51,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER , UPC: 041351914646",
+                "ndbno": "45364036",
+                "ds": "LI",
+                "manu": "ACH FOOD COMPANIES, INC."
+            },
+            {
+                "offset": 52,
+                "group": "Branded Food Products Database",
+                "name": "GOLDEN VALLEY NATURAL, ORGANIC BEEF JERKY, BLACK PEPPER, UPC: 817820006217",
+                "ndbno": "45004619",
+                "ds": "LI",
+                "manu": "Intermountain Natural, LLC"
+            },
+            {
+                "offset": 53,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER COARSE GRIND, UPC: 608623000553",
+                "ndbno": "45021998",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 54,
+                "group": "Branded Food Products Database",
+                "name": "CRACKED BLACK PEPPER ALMOND FLOUR CRACKERS, UPC: 856069005308",
+                "ndbno": "45314943",
+                "ds": "LI",
+                "manu": "SIMPLE MILLS"
+            },
+            {
+                "offset": 55,
+                "group": "Branded Food Products Database",
+                "name": "SWEET & ZESTY WITH STRAWBERRIES, CRACKED BLACK PEPPER CASHEWS & AGED SWISS CHEESE SNACKS, UPC: 812049002620",
+                "ndbno": "45314777",
+                "ds": "LI",
+                "manu": "Naturipe Farms, LLC"
+            },
+            {
+                "offset": 56,
+                "group": "Branded Food Products Database",
+                "name": "FINE GROUND BLACK PEPPER, UPC: 016291441453",
+                "ndbno": "45060476",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 57,
+                "group": "Branded Food Products Database",
+                "name": "COARSE GROUND BLACK PEPPER, UPC: 016291441378",
+                "ndbno": "45060425",
+                "ds": "LI",
+                "manu": "Morton Bassett Inc."
+            },
+            {
+                "offset": 58,
+                "group": "Branded Food Products Database",
+                "name": "CRACKED BLACK PEPPER & SEA SALT SALMON, UPC: 019600921516",
+                "ndbno": "45122405",
+                "ds": "LI",
+                "manu": "PINNACLE FOODS GROUP LLC"
+            },
+            {
+                "offset": 59,
+                "group": "Branded Food Products Database",
+                "name": "TELLICHERRY GROUND BLACK PEPPER, UPC: 021248167263",
+                "ndbno": "45181702",
+                "ds": "LI",
+                "manu": "Olde Thompson, Inc."
+            },
+            {
+                "offset": 60,
+                "group": "Branded Food Products Database",
+                "name": "TELLICHERRY BLACK PEPPER, UPC: 021248105029",
+                "ndbno": "45181684",
+                "ds": "LI",
+                "manu": "Olde Thompson, Inc."
+            },
+            {
+                "offset": 61,
+                "group": "Branded Food Products Database",
+                "name": "FOOD CLUB, IODIZED SALT & BLACK PEPPER SHAKER SET, UPC: 036800045569",
+                "ndbno": "45012163",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 62,
+                "group": "Branded Food Products Database",
+                "name": "WHITE CHEDDAR RICED CAULIFLOWER WITH BLACK PEPPER, UPC: 034183000076",
+                "ndbno": "45363536",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 63,
+                "group": "Branded Food Products Database",
+                "name": "KAMEDA CRISPS, SAVORY RICE SNACK WITH ROASTED PEANUTS, BLACK PEPPER, UPC: 811507010184",
+                "ndbno": "45089953",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 64,
+                "group": "Branded Food Products Database",
+                "name": "ROUNDY'S, IODIZED SALT & BLACK PEPPER SET, UPC: 011150270052",
+                "ndbno": "45009524",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 65,
+                "group": "Branded Food Products Database",
+                "name": "SEA SALT & BLACK PEPPER POTATOES, UPC: 071117027020",
+                "ndbno": "45357169",
+                "ds": "LI",
+                "manu": "RESER'S FINE FOODS, INC."
+            },
+            {
+                "offset": 66,
+                "group": "Branded Food Products Database",
+                "name": "CRACKED BLACK PEPPER BEEF JERKY, UPC: 856170005136",
+                "ndbno": "45203709",
+                "ds": "LI",
+                "manu": "Preferred Wholesale, Inc."
+            },
+            {
+                "offset": 67,
+                "group": "Branded Food Products Database",
+                "name": "ITALIAN DRY BLACK PEPPER SALAMI, UPC: 765171081479",
+                "ndbno": "45186213",
+                "ds": "LI",
+                "manu": "John Volpi & Co., Inc."
+            },
+            {
+                "offset": 68,
+                "group": "Branded Food Products Database",
+                "name": "SEA SALT AND CRACKED BLACK PEPPER, UPC: 819898010004",
+                "ndbno": "45044121",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 69,
+                "group": "Branded Food Products Database",
+                "name": "OLDE THOMPSON, WHOLE TELLICHERRY BLACK PEPPER, UPC: 021248167027",
+                "ndbno": "45181699",
+                "ds": "LI",
+                "manu": "Olde Thompson, Inc."
+            },
+            {
+                "offset": 70,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER CHIPS, UPC: 869682000025",
+                "ndbno": "45203835",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 71,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER KETCHUP, BOLD & ROBUST, UPC: 736924218442",
+                "ndbno": "45078760",
+                "ds": "LI",
+                "manu": "Figueroa Brothers, Inc."
+            },
+            {
+                "offset": 72,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER & ORANGE ZEST BAR, UPC: 893869003158",
+                "ndbno": "45362894",
+                "ds": "LI",
+                "manu": "THE J.M. SMUCKER COMPANY"
+            },
+            {
+                "offset": 73,
+                "group": "Branded Food Products Database",
+                "name": "SARTORI, BLACK PEPPER BELLA VITANO CHEESE, UPC: 213296604801",
+                "ndbno": "45036197",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 74,
+                "group": "Branded Food Products Database",
+                "name": "SPICE SUPREME, IODIZED SALT, BLACK PEPPER, UPC: 076114309070",
+                "ndbno": "45034872",
+                "ds": "LI",
+                "manu": "Gel Spice Company Inc"
+            },
+            {
+                "offset": 75,
+                "group": "Branded Food Products Database",
+                "name": "SEXYPOP, GOURMET AIR POPPED POPCORN, BLACK PEPPER, UPC: 859941005090",
+                "ndbno": "45158696",
+                "ds": "LI",
+                "manu": "Sexy Pop LLC"
+            },
+            {
+                "offset": 76,
+                "group": "Branded Food Products Database",
+                "name": "100% ORGANIC FINE GROUND BLACK PEPPER, UPC: 016291442450",
+                "ndbno": "45059040",
+                "ds": "LI",
+                "manu": "Morton Bassett Inc."
+            },
+            {
+                "offset": 77,
+                "group": "Branded Food Products Database",
+                "name": "100% ORGANIC WHOLE BLACK PEPPER CORNS, UPC: 016291442399",
+                "ndbno": "45058936",
+                "ds": "LI",
+                "manu": "Morton Bassett Inc."
+            },
+            {
+                "offset": 78,
+                "group": "Branded Food Products Database",
+                "name": "100|% ORGANIC COARSE GROUND BLACK PEPPER, UPC: 016291442375",
+                "ndbno": "45058913",
+                "ds": "LI",
+                "manu": "Morton Bassett Inc."
+            },
+            {
+                "offset": 79,
+                "group": "Branded Food Products Database",
+                "name": "QUAKER, POPPED, RICE CHIPS, SEA SALT & CRACKED BLACK PEPPER, UPC: 030000160008",
+                "ndbno": "45294752",
+                "ds": "LI",
+                "manu": "THE QUAKER OATS COMPANY"
+            },
+            {
+                "offset": 80,
+                "group": "Branded Food Products Database",
+                "name": "STEAK & CHOP MARINADE WITH GARLIC AND BLACK PEPPER, UPC: 041303000878",
+                "ndbno": "45283675",
+                "ds": "LI",
+                "manu": "Supervalu, Inc."
+            },
+            {
+                "offset": 81,
+                "group": "Branded Food Products Database",
+                "name": "PCC, BLACK PEPPER TURKEY JERKY, SMOKE, UPC: 817820002813",
+                "ndbno": "45024745",
+                "ds": "LI",
+                "manu": "Intermountain Natural, LLC"
+            },
+            {
+                "offset": 82,
+                "group": "Branded Food Products Database",
+                "name": "SHOPRITE, STEAK AND CHOP MARINADE WITH GARLIC & CRACKED BLACK PEPPER, UPC: 041190049165",
+                "ndbno": "45202094",
+                "ds": "LI",
+                "manu": "WAKEFERN FOOD CORPORATION"
+            },
+            {
+                "offset": 83,
+                "group": "Branded Food Products Database",
+                "name": "VICTORIA TAYLOR'S, CRACKED BLACK PEPPER STEAK, UPC: 666227700088",
+                "ndbno": "45185409",
+                "ds": "LI",
+                "manu": "Victoria Gourmet, Inc"
+            },
+            {
+                "offset": 84,
+                "group": "Branded Food Products Database",
+                "name": "CRINKLE CUT SWEET POTATO FRIES WITH SEA SALT AND BLACK PEPPER, UPC: 834183007156",
+                "ndbno": "45319665",
+                "ds": "LI",
+                "manu": "Lamb Weston Sales, Inc."
+            },
+            {
+                "offset": 85,
+                "group": "Branded Food Products Database",
+                "name": "CRACKED BLACK PEPPER PARMESAN BREAD, UPC: 708820342958",
+                "ndbno": "45178716",
+                "ds": "LI",
+                "manu": "Meijer, Inc."
+            },
+            {
+                "offset": 86,
+                "group": "Branded Food Products Database",
+                "name": "LA FLOR, GROUND BLACK PEPPER, UPC: 077636011519",
+                "ndbno": "45363066",
+                "ds": "LI",
+                "manu": "La Flor Products Co Inc"
+            },
+            {
+                "offset": 87,
+                "group": "Branded Food Products Database",
+                "name": "ASS KICKIN', BEEF JERKY, BLACK PEPPER, UPC: 089382115731",
+                "ndbno": "45030881",
+                "ds": "LI",
+                "manu": "Southwest Specialty Food Inc."
+            },
+            {
+                "offset": 88,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER & BLUE CHEESE ORGANIC GRASS-FED BEEF BURGERS, UPC: 812154025606",
+                "ndbno": "45202947",
+                "ds": "LI",
+                "manu": "Frontiere Natural Meats, LLC."
+            },
+            {
+                "offset": 89,
+                "group": "Branded Food Products Database",
+                "name": "SHIRAKIKU, BLACK PEPPER POWDER, UPC: 074410344276",
+                "ndbno": "45099829",
+                "ds": "LI",
+                "manu": "WISMETTAC ASIAN FOODS, INC."
+            },
+            {
+                "offset": 90,
+                "group": "Branded Food Products Database",
+                "name": "WINCO FOODS, BLACK PEPPER GROUND, UPC: 070552200166",
+                "ndbno": "45096325",
+                "ds": "LI",
+                "manu": "Winco Foods, Inc."
+            },
+            {
+                "offset": 91,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER VEGAN TOONA, UPC: 851110003265",
+                "ndbno": "45084602",
+                "ds": "LI",
+                "manu": "Sophie's Kitchen Inc."
+            },
+            {
+                "offset": 92,
+                "group": "Branded Food Products Database",
+                "name": "KA-ME, BLACK PEPPER SAUCE, UPC: 070844005332",
+                "ndbno": "45042271",
+                "ds": "LI",
+                "manu": "PANOS Brands LLC"
+            },
+            {
+                "offset": 93,
+                "group": "Branded Food Products Database",
+                "name": "RICKY'S LUCKY NUTS, UNIQUELY ROASTED PREMIUM PEANUTS, BLACK PEPPER & SEA SALT, UPC: 891473002451",
+                "ndbno": "45101282",
+                "ds": "LI",
+                "manu": "Ricky's Lucky Nuts, LLC"
+            },
+            {
+                "offset": 94,
+                "group": "Branded Food Products Database",
+                "name": "SEXY POP, BLACK PEPPER, UPC: 859941005038",
+                "ndbno": "45158697",
+                "ds": "LI",
+                "manu": "Sexy Pop LLC"
+            },
+            {
+                "offset": 95,
+                "group": "Branded Food Products Database",
+                "name": "SARTORI, BELLAVITANO CHEESE, BLACK PEPPER, UPC: 011863118771",
+                "ndbno": "45101393",
+                "ds": "LI",
+                "manu": "SARTORI COMPANY"
+            },
+            {
+                "offset": 96,
+                "group": "Branded Food Products Database",
+                "name": "STELLA, ROMANO CHEESE, BLACK PEPPER, UPC: 075805602940",
+                "ndbno": "45042346",
+                "ds": "LI",
+                "manu": "SAPUTO CHEESE USA INC."
+            },
+            {
+                "offset": 97,
+                "group": "Branded Food Products Database",
+                "name": "FENNEL & BLACK PEPPER BACON SPREAD, UPC: 852225003096",
+                "ndbno": "45180481",
+                "ds": "LI",
+                "manu": "Skillet Food Products"
+            },
+            {
+                "offset": 98,
+                "group": "Branded Food Products Database",
+                "name": "H-E-B CENTRAL MARKET, BLACK PEPPER UNCURED BACON, UPC: 041220891313",
+                "ndbno": "45173333",
+                "ds": "LI",
+                "manu": "H E Butt Grocery Company"
+            },
+            {
+                "offset": 99,
+                "group": "Branded Food Products Database",
+                "name": "KRAFT, STACKED CHEESE & MEAT SNACK, WHITE CHEDDAR SALAMI WITH BLACK PEPPER, UPC: 02174806",
+                "ndbno": "45253941",
+                "ds": "LI",
+                "manu": "KRAFT HEINZ FOODS COMPANY"
+            },
+            {
+                "offset": 100,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPERED HAM, UPC: 051900801129",
+                "ndbno": "45214511",
+                "ds": "LI",
+                "manu": "LAND O'FROST, INC."
+            },
+            {
+                "offset": 101,
+                "group": "Branded Food Products Database",
+                "name": "HIMALAYAN PINK SALT BLACK PEPPER AND GARLIC SEASONING, UPC: 052100041155",
+                "ndbno": "45327353",
+                "ds": "LI",
+                "manu": "MCCORMICK & COMPANY, INC."
+            },
+            {
+                "offset": 102,
+                "group": "Branded Food Products Database",
+                "name": "GARLIC HERB BLACK PEPPER AND SEA SALT, UPC: 052100040790",
+                "ndbno": "45327292",
+                "ds": "LI",
+                "manu": "MCCORMICK & COMPANY, INC."
+            },
+            {
+                "offset": 103,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER CHICKEN, UPC: 021130104307",
+                "ndbno": "45325528",
+                "ds": "LI",
+                "manu": "Safeway, Inc."
+            },
+            {
+                "offset": 104,
+                "group": "Branded Food Products Database",
+                "name": "OLIVE SNACK MARINATED WITH CHILLI & BLACK PEPPER, UPC: 607959700502",
+                "ndbno": "45291186",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 105,
+                "group": "Branded Food Products Database",
+                "name": "AUTHENTIC-STYLE BLACK PEPPER & LIME YELLOW CORN TORTILLA CHIPS, UPC: 085239616789",
+                "ndbno": "45274514",
+                "ds": "LI",
+                "manu": "Target Stores"
+            },
+            {
+                "offset": 106,
+                "group": "Branded Food Products Database",
+                "name": "ASIAGO CHEESE & CRACKED BLACK PEPPER RICE, UPC: 041000716157",
+                "ndbno": "45322623",
+                "ds": "LI",
+                "manu": "Lipton"
+            },
+            {
+                "offset": 107,
+                "group": "Branded Food Products Database",
+                "name": "CRACKED BLACK PEPPER CHEDDAR CHEESE, UPC: 075925300863",
+                "ndbno": "45322752",
+                "ds": "LI",
+                "manu": "Milton G. Waldbaum Company"
+            },
+            {
+                "offset": 108,
+                "group": "Branded Food Products Database",
+                "name": "CRACKED BLACK PEPPER CHEDDAR, UPC: 075925604787",
+                "ndbno": "45272752",
+                "ds": "LI",
+                "manu": "Milton G. Waldbaum Company"
+            },
+            {
+                "offset": 109,
+                "group": "Branded Food Products Database",
+                "name": "WHOLEY CHEESE CRISPY BAKED CRACKERS SWISS& BLACK PEPPER, UPC: 077975092064",
+                "ndbno": "45286049",
+                "ds": "LI",
+                "manu": "Snyder's-Lance, Inc."
+            },
+            {
+                "offset": 110,
+                "group": "Branded Food Products Database",
+                "name": "ORGANIC GROUND BLACK PEPPER, UPC: 078742170114",
+                "ndbno": "45230076",
+                "ds": "LI",
+                "manu": "WAL-MART STORES, INC."
+            },
+            {
+                "offset": 111,
+                "group": "Branded Food Products Database",
+                "name": "SMOKED SAUSAGE WITH BOURBON WHISKEY, UNCURED BACON AND CRACKED BLACK PEPPER, UPC: 050754108538",
+                "ndbno": "45205308",
+                "ds": "LI",
+                "manu": "Silva Sausage Co. Inc."
+            },
+            {
+                "offset": 112,
+                "group": "Branded Food Products Database",
+                "name": "TILLAMOOK, SMOKED WHITE CHEDDAR CHEESE, BLACK PEPPER, UPC: 072830033404",
+                "ndbno": "45085360",
+                "ds": "LI",
+                "manu": "TILLAMOOK COUNTY CREAMERY ASSOCIATION"
+            },
+            {
+                "offset": 113,
+                "group": "Branded Food Products Database",
+                "name": "SMOKED BLACK PEPPER WHITE CHEDDAR CHEESE, UPC: 072830000970",
+                "ndbno": "45227535",
+                "ds": "LI",
+                "manu": "TILLAMOOK COUNTY CREAMERY ASSOCIATION"
+            },
+            {
+                "offset": 114,
+                "group": "Branded Food Products Database",
+                "name": "BLACK PEPPER & WILD SALMON, UPC: 889396003136",
+                "ndbno": "45361009",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 115,
+                "group": "Branded Food Products Database",
+                "name": "BUMBLE BEE, SUPER FRESH, SALMON WITH GARLICKY BLACK PEPPER & EXTRA VIRGIN OIL, UPC: 086600777160",
+                "ndbno": "45045457",
+                "ds": "LI",
+                "manu": "BUMBLE BEE FOODS, LLC"
+            },
+            {
+                "offset": 116,
+                "group": "Branded Food Products Database",
+                "name": "HORMEL, NATURAL CHOICE, CRACKED BLACK PEPPER DELI TURKEY, UPC: 037600455305",
+                "ndbno": "45206977",
+                "ds": "LI",
+                "manu": "HORMEL FOODS CORPORATION"
+            },
+            {
+                "offset": 117,
+                "group": "Branded Food Products Database",
+                "name": "DESERT PEPPER TRADING COMPANY, AUTHENTIC CORN BLACK BEAN RED PEPPER SALSA, MEDIUM, UPC: 71921136",
+                "ndbno": "45081627",
+                "ds": "LI",
+                "manu": "Leventhal Bros. & Co., Inc."
+            },
+            {
+                "offset": 118,
+                "group": "Branded Food Products Database",
+                "name": "THE SPICE HUNTER, ORGANIC GRINDER SALT FREE BLACK & WHITE PEPPER, UPC: 081057020333",
+                "ndbno": "45030841",
+                "ds": "LI",
+                "manu": "THE SPICE HUNTER, INC."
+            },
+            {
+                "offset": 119,
                 "group": "Spices and Herbs",
                 "name": "Spices, pepper, black",
-                "ndbno": "02030"
+                "ndbno": "02030",
+                "ds": "SR",
+                "manu": "none"
+            },
+            {
+                "offset": 120,
+                "group": "Branded Food Products Database",
+                "name": "RANCH STYLE Black Label Red Pepper Baked Beans, UNPREPARED, GTIN: 00046900002959",
+                "ndbno": "45134239",
+                "ds": "GDSN",
+                "manu": "Conagra Brands"
+            },
+            {
+                "offset": 121,
+                "group": "Branded Food Products Database",
+                "name": "CORN BLACK BEAN RED PEPPER SALSA, UPC: 719212799755",
+                "ndbno": "45123053",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 122,
+                "group": "Branded Food Products Database",
+                "name": "TEX MEX CORN & MUKIMAME WITH PEPPERS, BLACK BEANS, OLIVE OIL, AND SEA SALY, UPC: 855229005561",
+                "ndbno": "45269339",
+                "ds": "LI",
+                "manu": "Harvest Food Group, Inc."
+            },
+            {
+                "offset": 123,
+                "group": "Branded Food Products Database",
+                "name": "SHOP RITE, RISING CRUST PIZZA SUPREME WITH SAUSAGE, PEPPERONI, PEPPERS, ONIONS & BLACK OLIVES, UPC: 041190406470",
+                "ndbno": "45008844",
+                "ds": "LI",
+                "manu": "WAKEFERN FOOD CORPORATION"
+            },
+            {
+                "offset": 124,
+                "group": "Branded Food Products Database",
+                "name": "SUPREME PIZZA, SAUSAGE, PEPPERONI, RED & GREEN PEPPERS, ONIONS, BLACK OLIVES, UPC: 092825093602",
+                "ndbno": "45282423",
+                "ds": "LI",
+                "manu": "Brookshire Grocery Company"
+            },
+            {
+                "offset": 125,
+                "group": "Branded Food Products Database",
+                "name": "PASTA, SEASONING, CORN, BLACK BEANS & RED BELL PEPPERS, UPC: 016000743342",
+                "ndbno": "45320812",
+                "ds": "LI",
+                "manu": "GENERAL MILLS, INC."
+            },
+            {
+                "offset": 126,
+                "group": "Branded Food Products Database",
+                "name": "ROASTED PEPPER STUFFED CALIFORNIA BLACK RIPE OLIVES, UPC: 072999802033",
+                "ndbno": "45277610",
+                "ds": "LI",
+                "manu": "Musco Olive Products, Inc."
+            },
+            {
+                "offset": 127,
+                "group": "Branded Food Products Database",
+                "name": "BETTER BEAN, CUBAN BLACK BEANS, SAUTED ONION & POBLANO PEPPER, UPC: 852405002048",
+                "ndbno": "45341989",
+                "ds": "LI",
+                "manu": "The Better Bean Company"
+            },
+            {
+                "offset": 128,
+                "group": "Branded Food Products Database",
+                "name": "SPICY RED PEPPER PORK WITH BLACK BEANS STICK, UPC: 815296020447",
+                "ndbno": "45337580",
+                "ds": "LI",
+                "manu": "THE HERSHEY COMPANY"
+            },
+            {
+                "offset": 129,
+                "group": "Branded Food Products Database",
+                "name": "SPICY RED PEPPER PORK WITH BLACK BEANS, UPC: 815296020454",
+                "ndbno": "45337448",
+                "ds": "LI",
+                "manu": "THE HERSHEY COMPANY"
+            },
+            {
+                "offset": 130,
+                "group": "Branded Food Products Database",
+                "name": "CHICKEN TAMALES WITH BLACK BEANS, JACK CHEESE AND POBLANO PEPPERS, UPC: 038794998050",
+                "ndbno": "45350419",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 131,
+                "group": "Branded Food Products Database",
+                "name": "CORN & BLACK BEAN QUINOA BLEND WITH PINEAPPLE & RED PEPPER, UPC: 085239058206",
+                "ndbno": "45227447",
+                "ds": "LI",
+                "manu": "Target Stores"
+            },
+            {
+                "offset": 132,
+                "group": "Branded Food Products Database",
+                "name": "PUBLIX DELI, BLACK BEAN HUMMUS, OLIVE OIL AND ROASTED RED PEPPERS, UPC: 041415450622",
+                "ndbno": "45174076",
+                "ds": "LI",
+                "manu": "PUBLIX SUPER MARKETS, INC."
             }
         ]
     }

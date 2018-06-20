@@ -1,5 +1,4 @@
 <?php
-if $logged_in) {
-        print "Welcome, user.";
-    }
-?>
+if $loggedIn) {
+    print "歡迎，用戶。";
+}

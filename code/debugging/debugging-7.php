@@ -1,2 +1,2 @@
 <?php
-die('This is: ' . __FILE__);
+die('這是：' . __FILE__);

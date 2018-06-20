@@ -1,3 +1,2 @@
-<?php 
-
+<?php
 print $url;
