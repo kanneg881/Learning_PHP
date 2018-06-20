@@ -1,8 +1,14 @@
 <?php
+/** @var string $name 名稱 */
 $name = 'Umberto';
-function say_hello( ) {
-    print 'Hello, ';
+
+/**
+ * 說你好
+ */
+function sayHello(): void
+{
+    print '你好，';
     print global $name;
 }
-say_hello( );
-?>
+
+sayHello();

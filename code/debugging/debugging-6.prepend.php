@@ -1,1 +1,2 @@
-<?php $total_price = $price = $tax_rate = 0;
+<?php
+$totalPrice = $price = $taxRate = 0;

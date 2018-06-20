@@ -1,11 +1,13 @@
 <?php
-$prices = array(5.95, 3.00, 12.50);
-$total_price = 0;
-$tax_rate = 1.08; // 8% tax
+/** @var array $prices 價錢 */
+$prices = [5.95, 3.00, 12.50];
+/** @var int $totalPrice 總價 */
+$totalPrice = 0;
+/** @var float $taxRate 8% 的稅 */
+$taxRate = 1.08;
 
 foreach ($prices as $price) {
-    $total_price = $price * $tax_rate;
+    $totalPrice = $price * $taxRate;
 }
 
-printf('Total price (with tax): $%.2f', $total_price);
-?>
+printf('總價格(含稅)：$%.2f', $totalPrice);

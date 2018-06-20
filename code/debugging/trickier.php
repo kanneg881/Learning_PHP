@@ -1,8 +1,7 @@
 <?php
-$first_name = "David';
-if ($logged_in) {
-    print "Welcome, $first_name";
+$firstName = "David';
+if ($loggedIn) {
+    print "歡迎，$firstName";
 } else {
-    print "Howdy, Stranger.";
+    print "你好，陌生人。";
 }
-?>

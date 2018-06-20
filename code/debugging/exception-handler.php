@@ -1,19 +1,24 @@
 <?php
 
-function niceExceptionHandler($ex) {
-    // Tell the user something unthreatening
-    print "Sorry! Something unexpected happened. Please try again later.";
-    // Log more detailed information for a sysadmin to review
-    error_log("{$ex->getMessage()} in {$ex->getFile()} @ {$ex->getLine()}");
-    error_log($ex->getTraceAsString());
+/**
+ * 客製的例外處理函式
+ *
+ * @param Exception $exception 例外
+ */
+function niceExceptionHandler(Exception $exception): void
+{
+    // 告訴使用者有位處理的例外
+    print "抱歉！發生了未預期的事情。請稍後再試。";
+    // 將詳細的例外資訊寫到紀錄檔中，讓系統管理者知道發生了什麼事
+    error_log("{$exception->getMessage()} 在 {$exception->getFile()} @ {$exception->getLine()}");
+    error_log($exception->getTraceAsString());
 }
 
 set_exception_handler('niceExceptionHandler');
 
-print "I'm about to connect to a made up, pretend, broken database!\n";
+print "我即將連接到一個偽裝，假裝，破壞的數據庫！\n";
 
-// The DSN given to the PDO constructor does not specify a valid database
-// or connection parameters, so the constructor will throw an exception
-$db = new PDO('garbage:this is obviously not going to work!');
+/** @var PDO $database 故意傳一個不合法的參數 DSN 的 PDO，藉此製造出一個例外 */
+$database = new PDO('garbage:this is obviously not going to work!');
 
-print "This is not going to get printed.";
+print "這不會被印出。";

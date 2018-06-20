@@ -1,2 +1,2 @@
 <?php 
-$_POST = array('ham' => 'burger');
+$_POST = ['漢' => '堡'];
