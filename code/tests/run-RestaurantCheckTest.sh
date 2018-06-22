@@ -1,1 +1,1 @@
-phpunit.phar RestaurantCheckTest.php
+./vendor/bin/phpunit --bootstrap ./tests/RestaurantCheckTest.php

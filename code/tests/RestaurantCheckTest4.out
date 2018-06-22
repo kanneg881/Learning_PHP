@@ -1,15 +1,15 @@
-PHPUnit 4.8.11 by Sebastian Bergmann and contributors.
+PHPUnit 7.2.4 by Sebastian Bergmann and contributors.
 
-...F.
+...F.                                                               5 / 5 (100%)
 
-Time: 138 ms, Memory: 13.50Mb
+Time: 138 ms, Memory: 13.50MB
 
 There was 1 failure:
 
 1) RestaurantCheckTest::testTipShouldIncludeTax
 Failed asserting that 120.0 matches expected 121.
 
-RestaurantCheckTest.php:40
+RestaurantCheckTest.php:73
 
 FAILURES!
 Tests: 5, Assertions: 5, Failures: 1.
