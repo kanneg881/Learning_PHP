@@ -47,11 +47,11 @@ class FormHelper
     /**
      * 選項是否選取
      *
-     * @param string $name 名稱
+     * @param string|null $name 名稱
      * @param string $value 值
      * @return bool 是否選取
      */
-    protected function isOptionSelected(string $name, string $value): bool
+    protected function isOptionSelected($name, string $value): bool
     {
         // 如果 $name 不在 values 陣列中，選項就不會選取
         if (!isset($this->values[$name])) {
@@ -78,7 +78,7 @@ class FormHelper
         array $attributes = [],
         bool $isMultiple = false
     ): string {
-        return "<$tag {$this->attributes($attributes, $isMultiple)} />";
+        return "<$tag {$this->attributes($attributes, $isMultiple)}>";
     }
 
     /**
@@ -181,11 +181,11 @@ class FormHelper
     /**
      * 選項標籤
      *
-     * @param string $name 名稱
+     * @param string|null $name 名稱
      * @param array $options 選項
      * @return string 選項標籤
      */
-    protected function options(string $name, array $options): string
+    protected function options($name, array $options): string
     {
         /** @var array $result 結果 */
         $result = array();
