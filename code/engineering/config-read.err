@@ -1,0 +1,10 @@
+PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in /Applications/MAMP/htdocs/Learning_PHP/code/engineering/config-read.php:5
+Stack trace:
+#0 /Applications/MAMP/htdocs/Learning_PHP/code/engineering/config-read.php(5): PDO->__construct('mysql:host=db.d...', 'devuser', 'raisins')
+#1 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in /Applications/MAMP/htdocs/Learning_PHP/code/engineering/config-read.php:5
+Stack trace:
+#0 /Applications/MAMP/htdocs/Learning_PHP/code/engineering/config-read.php(5): PDO->__construct('mysql:host=db.d...', 'devuser', 'raisins')
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/Learning_PHP/code/engineering/config-read.php on line 5

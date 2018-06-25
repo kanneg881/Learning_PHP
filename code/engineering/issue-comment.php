@@ -1,3 +1,3 @@
 <?php
-// MXH-26: URL-encode email address to prevent problems with +
+// MXH-26: 將 email 地址 URL 編碼，避免 + 問題
 $email = urlencode($email);
