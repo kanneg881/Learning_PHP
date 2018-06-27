@@ -1,7 +1,6 @@
 <?php
-
-$_POST['yr'] = '2016';
-$_POST['mo'] = '5';
-$_POST['dy'] = '12';
-$_POST['hr'] = '4';
-$_POST['mn'] = '15';
+$_POST['year'] = '2016';
+$_POST['month'] = '5';
+$_POST['day'] = '12';
+$_POST['hour'] = '4';
+$_POST['minute'] = '15';

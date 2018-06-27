@@ -1,11 +1,13 @@
 <?php
-
+/** @var DateTime $now 現在的時間物件 */
 $now = new DateTime();
-$birthdate = new DateTime('1990-05-12');
-$diff = $birthdate->diff($now);
+/** @var DateTime $birthDate 生日 */
+$birthDate = new DateTime('1990-05-12');
+/** @var bool|DateInterval $different 差異 */
+$different = $birthDate->diff($now);
 
-if (($diff->y > 13) && ($diff->invert == 0)) {
-    print "You are more than 13 years old.";
+if (($different->y > 13) && ($different->invert == 0)) {
+    print "你超過13歲。";
 } else {
-    print "Sorry, too young.";
+    print "對不起，太年輕了。";
 }

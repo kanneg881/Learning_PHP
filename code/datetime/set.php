@@ -1,16 +1,16 @@
 <?php
-// $_POST['mo'], $_POST['dy'], and $_POST['yr']
-// contain month number, day, and year submitted
-// from a form.
-//
-// $_POST['hr'], $_POST['mn'] contain
-// hour and minute submitted from a form
+/**
+ * $_POST['month']，$_POST['day']，和 $_POST['year']
+ * 包含從表單提交的月份、日期
+ *
+ * $_POST['hr']，$_POST['mn']
+ * 包含從表單提交的時和分
+ */
 
-// $d contains the current time, but soon that will
-// be overridden.
-$d = new DateTime();
+/** @var DateTime $datetime 包含現在的時間，但接著就會被覆蓋掉 */
+$datetime = new DateTime();
 
-$d->setDate($_POST['yr'], $_POST['mo'], $_POST['dy']);
-$d->setTime($_POST['hr'], $_POST['mn']);
+$datetime->setDate($_POST['year'], $_POST['month'], $_POST['day']);
+$datetime->setTime($_POST['hour'], $_POST['minute']);
 
-print $d->format('r');
+print $datetime->format('r');

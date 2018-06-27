@@ -1,1 +1,2 @@
-<?php $email = 'blub';
+<?php
+$email = 'blub';

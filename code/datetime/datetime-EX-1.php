@@ -1,5 +1,7 @@
 <?php
-$d = new DateTime();
-print 'It is now: ';
-print $d->format('r');
+/** @var DateTime $dateTime 時間物件 */
+$dateTime = new DateTime();
+
+print '現在時間：';
+print $dateTime->format('r');
 print "\n";

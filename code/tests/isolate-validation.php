@@ -1,23 +1,32 @@
 <?php
-function validate_form($submitted) {
-    $errors = array();
-    $input = array();
+/**
+ * 驗證表單
+ *
+ * @param array $submitted 提交
+ * @return array 錯誤訊息和輸入資料
+ */
+function validateForm(array $submitted): array
+{
+    /** @var array $errors 錯誤訊息 */
+    $errors = [];
+    /** @var array $input 輸入資料 */
+    $input = [];
 
-    $input['age'] = filter_var($submitted['age'] ?? NULL, FILTER_VALIDATE_INT);
+    $input['age'] = filter_var($submitted['age'] ?? null, FILTER_VALIDATE_INT);
+
     if ($input['age'] === false) {
-        $errors[] = 'Please enter a valid age.';
+        $errors[] = '請輸入有效年齡。';
     }
+    $input['price'] = filter_var($submitted['price'] ?? null, FILTER_VALIDATE_FLOAT);
 
-    $input['price'] = filter_var($submitted['price'] ?? NULL,
-                                 FILTER_VALIDATE_FLOAT);
     if ($input['price'] === false) {
-        $errors[] = 'Please enter a valid price.';
+        $errors[] = '請輸入有效的價格。';
     }
-
     $input['name'] = trim($submitted['name'] ?? '');
+
     if (strlen($input['name']) == 0) {
-        $errors[] = "Your name is required.";
+        $errors[] = "需要你的名字。";
     }
 
-    return array($errors, $input);
+    return [$errors, $input,];
 }

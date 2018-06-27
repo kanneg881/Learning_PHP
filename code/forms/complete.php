@@ -17,7 +17,7 @@ $sweets = [
     '鬆餅' => '芝麻鬆餅',
     '方形' => '方形椰奶凝膠',
     '蛋糕' => '黑糖蛋糕',
-    '米肉' => '甜米飯和肉'
+    '米肉' => '甜米飯和肉',
 ];
 /** @var array $mainDishes 主菜 */
 $mainDishes = [
@@ -26,7 +26,7 @@ $mainDishes = [
     '肚' => '葡萄酒醬炒牛肚',
     '芋頭' => '芋頭燉豬肉',
     '內臟' => '鹽焗內臟',
-    '鮑魚' => '鮑魚骨髓和鴨掌'
+    '鮑魚' => '鮑魚骨髓和鴨掌',
 ];
 
 /**
@@ -59,7 +59,7 @@ function showForm(array $errors = []): void
     /** @var array $defaults 預設值 */
     $defaults = [
         'delivery' => '是',
-        'size' => '中'
+        'size' => '中',
     ];
     /** @var FormHelper $form 表單 */
     $form = new FormHelper($defaults);

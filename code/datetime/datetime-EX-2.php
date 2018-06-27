@@ -1,3 +1,5 @@
 <?php
-$d = new DateTime();
-print $d->format('m/d/y');
+/** @var DateTime $dateTime 時間物件 */
+$dateTime = new DateTime();
+
+print $dateTime->format('m/d/y');
