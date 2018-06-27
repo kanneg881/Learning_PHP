@@ -1,18 +1,18 @@
 <?php
 
 $message->addPart(<<<_HTML_
-<p>Dear James,</p>
-<p>You should try this:</p>
+<p>親愛的 James</p>
+<p>Y你應該試試這個：</p>
 <ul>
-<li>puree 1 pound of chicken with two pounds of asparagus in the blender</li>
-<li>drop small balls of the mixture into a deep fryer.</li>
+<li>原漿1磅的雞肉和2磅的蘆筍到攪拌器中</li>
+<li>降下混合的小丸子到油炸鍋。</li>
 </ul>
 
-<p><em>Yummy!</em</p>
+<p><em>好吃！!</em></p>
 
-<p>Love,</p>
+<p>愛你</p>
 <p>Julia</p>
 
 _HTML_
-    // MIME type as second argument
+    // MIME 的種類寫在第二個參數
     , "text/html");
