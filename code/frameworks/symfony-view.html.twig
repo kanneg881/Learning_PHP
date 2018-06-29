@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<p> At {{ when|date("g:i a") }}, here is what's available: </p>
-<ul>
-{% for item in what %}
-<li>{{ item }}</li>
-{% endfor %}
-</ul>
+    <p> 在 {{ when|date("g:i a") }}，這裡是可提供的：</p>
+    <ul>
+        {% for item in what %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}

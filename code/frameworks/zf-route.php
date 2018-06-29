@@ -1,17 +1,28 @@
 <?php
+
 namespace Application\Controller;
 
+use DateTime;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
 class MenuController extends AbstractActionController
 {
-    public function showAction()
+    /**
+     * 顯示
+     *
+     * @return ViewModel
+     */
+    public function showAction(): ViewModel
     {
-        $now = new \DateTime();
-        $items = [ "Fried Potatoes", "Boiled Potatoes", "Baked Potatoes" ];
+        /** @var DateTime $now 現在時間 */
+        $now = new DateTime();
+        /** @var array $items 項目 */
+        $items = ["炸土豆", "煮土豆", "烤土豆",];
 
-        return new ViewModel(array('when' => $now,
-                                   'what' => $items));
+        return new ViewModel([
+            'when' => $now,
+            'what' => $items,
+        ]);
     }
 }

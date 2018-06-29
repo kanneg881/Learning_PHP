@@ -1,5 +1,5 @@
-    'controllers' => array(
-        'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
-        ),
-    ),
+'controllers' => [
+    'factories' => [
+        Controller\IndexController::class => InvokableFactory::class,
+    ],
+],

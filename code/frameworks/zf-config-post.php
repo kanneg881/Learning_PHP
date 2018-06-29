@@ -1,6 +1,8 @@
-    'controllers' => array(
-        'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Menu' => 'Application\Controller\MenuController'
-        ),
-    ),
+'controllers' => [
+    'factories' => [
+        Controller\IndexController::class => InvokableFactory::class,
+    ],
+    'invokables' => [
+        Controller\MenuController::class => MenuController::class,
+    ],
+],

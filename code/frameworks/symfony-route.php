@@ -1,11 +1,12 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class MenuController extends Controller
 {
@@ -13,13 +14,17 @@ class MenuController extends Controller
      * @Route("/show")
      * @Method("GET")
      */
-    public function showAction()
+    public function showAction(): Response
     {
-        $now = new \DateTime();
-        $items = [ "Fried Potatoes", "Boiled Potatoes", "Baked Potatoes" ];
+        /** @var DateTime $now 現在時間 */
+        $now = new DateTime();
+        /** @var array $items 項目 */
+        $items = ["炸土豆", "煮土豆", "烤土豆",];
 
-        return $this->render("show-menu.html.twig",
-                             [ 'when' => $now,
-                               'what' => $items ]);
+        return $this->render('show_menu.html.twig',
+            [
+                'when' => $now,
+                'what' => $items,
+            ]);
     }
 }
