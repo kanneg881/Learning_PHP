@@ -1,2 +1,2 @@
-strlen() says 6 for cheese and 8 for τυρί.
-mb_strlen() says 6 for cheese and 4 for τυρί.
+strlen() 説 6 對於 cheese 然後 8 對於 τυρί.
+mb_strlen() 説 6 對於 cheese 然後 4 對於 τυρί.

@@ -1,7 +1,9 @@
 <?php
-
+/** @var string $english 英文 */
 $english = "Please stop shouting.";
+/** @var string $danish 丹麥文 */
 $danish = "Venligst stoppe råben.";
+/** @var string $vietnamese 越南文 */
 $vietnamese = "Hãy dừng la hét.";
 
 print "strtolower() says: \n";

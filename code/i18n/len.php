@@ -1,10 +1,11 @@
 <?php
-
+/** @var string $english 英文 */
 $english = "cheese";
+/** @var string $greek 希臘文 */
 $greek = "τυρί";
 
-print "strlen() says " . strlen($english) . " for $english and " .
-    strlen($greek) . " for $greek.\n";
+print "strlen() 説 " . strlen($english) . " 對於 $english 然後 " .
+    strlen($greek) . " 對於 $greek.\n";
 
-print "mb_strlen() says " . mb_strlen($english) . " for $english and " .
-    mb_strlen($greek) . " for $greek.\n";
+print "mb_strlen() 説 " . mb_strlen($english) . " 對於 $english 然後 " .
+    mb_strlen($greek) . " 對於 $greek.\n";
