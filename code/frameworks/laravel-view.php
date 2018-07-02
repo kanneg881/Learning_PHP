@@ -1,6 +1,6 @@
-<p> At <?php echo $when->format('g:i a') ?>, here is what's available: </p>
+<p> 在 <?= $when->format('g:i a') ?>，這裡是可提供的：</p>
 <ul>
-<?php foreach ($what as $item) { ?>
-<li><?php echo $item ?></li>
-<?php } ?>
+    <?php foreach ($what as $item) { ?>
+        <li><?= $item ?></li>
+    <?php } ?>
 </ul>
